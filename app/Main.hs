@@ -7,14 +7,20 @@ import Data.Text (Text)
 import qualified Data.Text as T
 import qualified Data.Map as M
 import Text.DocTemplates
-import Lib
+import Timeline (addTimeline)
 
-mdToPres :: Text -> Template Text -> Text -> IO Text
-mdToPres txt template dzcore =
+parseInput :: Text -> IO Pandoc
+parseInput txt =
     let readerOptions = def 
             { readerExtensions = pandocExtensions
             , readerStandalone = True
             }
+    in runIOorExplode $ 
+        readMarkdown readerOptions txt 
+
+printSlides :: Pandoc -> Template Text -> Text -> IO Text
+printSlides doc template dzcore = 
+    let
         writerOptions = def
             { writerTemplate = Just template
             , writerReferenceLinks = True
@@ -22,17 +28,14 @@ mdToPres txt template dzcore =
             , writerVariables = Context (M.singleton "dzslides-core" (toVal dzcore))
             }
     in runIOorExplode $ 
-        readMarkdown readerOptions txt 
-            >>= writeDZSlides writerOptions
-
+            writeDZSlides writerOptions doc
 
 main :: IO ()
 main = do 
-    txt <- T.readFile "Presentation.md" 
+    doc <- addTimeline =<< parseInput =<< T.readFile "Presentation.md"
     templateTxt <- T.readFile "template.html" 
     dzcoreTxt <- T.readFile "dz-core.html" 
     template <- either error id <$> compileTemplate "." templateTxt
-    out <- mdToPres txt template dzcoreTxt
-    T.writeFile "slides.html" out
+    T.writeFile "slides.html" =<< printSlides doc template dzcoreTxt
     putStrLn "done"
 

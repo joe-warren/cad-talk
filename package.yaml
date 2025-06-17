@@ -26,8 +26,13 @@ dependencies:
 - base >= 4.7 && < 5
 - text
 - containers
+- lens
 - doctemplates
 - pandoc
+- pandoc-types
+- megaparsec
+- JuicyPixels
+- svg-tree
 
 ghc-options:
 - -Wall
