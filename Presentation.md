@@ -43,7 +43,7 @@ testing what happens if I put some notes here
 
 ---
 
-# 2023 : Waterfall-CAD
+# 2023 : Waterfall-CAD ![](./assets/images/waterfall-cad-logo-square.svg)
 
 ---
 
