@@ -9,24 +9,48 @@ introductory_notes: |
 light: true
 #ratio43: true
 embed-css: true
-display-notes: true
+#display-notes: true
 overlay: 
 author:
   - name: Joe Warren
 ---
 
-# Intro
+# 2009 : FDM Patent Expires
 
 :::notes
 testing what happens if I put some notes here
 :::
 
-----
+--- 
 
-# Some Slide
+# 2006 : RepRap Project Started
 
-----
+---
 
-# Some Other Slide
+# 2016 : I Buy a 3d Printer
+
+---
+
+# 2010 : OpenSCAD Released
+
+--- 
+
+# 2018 : I Write a CSG Library 
+
+---
+
+# 1999 : OpenCascade Released
+
+---
+
+# 2023 : Waterfall-CAD
+
+---
+
+# 2024 : Christmas Ornaments
+
+---
+
+# Waterfall-CAD-SVG
 
 ---

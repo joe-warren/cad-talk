@@ -6,6 +6,8 @@
   :root { font-family: InterVariable, sans-serif; }
 }
 html, .view body {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
   background-color: black;
 }
 body, .view section { background-color: white; }
@@ -220,6 +222,8 @@ img.right {
 h1 {
   font-size: 3rem;
   text-align: center;
+  color: maroon;
+  font-family: 'Playfair Display', serif;
 }
 
 h2 {
@@ -227,6 +231,8 @@ h2 {
   font-size: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: maroon;
+  font-family: 'Playfair Display', serif;
 }
 
 h3 {
@@ -234,6 +240,8 @@ h3 {
   font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: maroon;
+  font-family: 'Playfair Display', serif;
 }
 
 h4 {
@@ -241,11 +249,14 @@ h4 {
   font-size: 1.4rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: maroon;
+  font-family: 'Playfair Display', serif;
 }
 
 .author {
   font-size: 2rem;
   font-weight: 600;
+  color: maroon;
 }
 
 .author-desc {
