@@ -15,7 +15,7 @@ author:
   - name: Joe Warren
 ---
 
-# 2009 : FDM Patent Expires
+# 2009 : FDM Patent Expires ![](./assets/images/fdm-patent.png)
 
 :::notes
 testing what happens if I put some notes here
@@ -23,23 +23,23 @@ testing what happens if I put some notes here
 
 --- 
 
-# 2006 : RepRap Project Started
+# 2006 : RepRap Project Started ![](./assets/images/rep-rap.jpg)
 
 ---
 
-# 2016 : I Buy a 3d Printer
+# 2016 : I Buy a 3d Printer ![](./assets/images/my-prusa.jpg)
 
 ---
 
-# 2010 : OpenSCAD Released
+# 2010 : OpenSCAD Released ![](./assets/images/openscad.jpg)
 
 --- 
 
-# 2018 : I Write a CSG Library 
+# 2018 : I Write a CSG Library ![](./assets/images/csg-haskell.jpg)
 
 ---
 
-# 1999 : OpenCascade Released
+# 1999 : OpenCascade Released ![](./assets/images/opencascade.png)
 
 ---
 
@@ -47,7 +47,7 @@ testing what happens if I put some notes here
 
 ---
 
-# 2024 : Christmas Ornaments
+# 2024 : Christmas Ornaments ![](./assets/images/christmas-haskell.jpg)
 
 ---
 

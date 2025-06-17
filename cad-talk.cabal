@@ -40,6 +40,7 @@ library
     , containers
     , doctemplates
     , lens
+    , linear
     , megaparsec
     , pandoc
     , pandoc-types
@@ -65,6 +66,7 @@ executable cad-talk-exe
     , containers
     , doctemplates
     , lens
+    , linear
     , megaparsec
     , pandoc
     , pandoc-types

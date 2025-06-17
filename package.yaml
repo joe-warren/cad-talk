@@ -27,6 +27,7 @@ dependencies:
 - text
 - containers
 - lens
+- linear
 - doctemplates
 - pandoc
 - pandoc-types
