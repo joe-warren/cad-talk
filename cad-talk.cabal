@@ -46,6 +46,7 @@ library
     , pandoc-types
     , svg-tree
     , text
+    , xml
   default-language: Haskell2010
 
 executable cad-talk-exe
@@ -72,4 +73,5 @@ executable cad-talk-exe
     , pandoc-types
     , svg-tree
     , text
+    , xml
   default-language: Haskell2010

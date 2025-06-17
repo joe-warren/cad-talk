@@ -21,6 +21,7 @@ import Data.Monoid (First (..))
 import qualified Data.Map as M 
 import Data.List (inits)
 import Linear (V2 (..))
+import Text.XML.Light.Output( ppcTopElement, prettyConfigPP )
 
 type Parser = P.Parsec Void Text
 
@@ -52,7 +53,10 @@ doBlock :: Block -> [Block]
 doBlock block@(Header l attrs tokens)  = case matchBlock block of 
     Just e -> 
         [ Header l attrs (filterImages tokens)
-        , Plain [Image nullAttr [] ("generated/timeline-" <> T.pack (show (year e)) <> ".svg", text e)]
+        -- , RawBlock (Format "html") (svgToText $ timelineSvg bounds (Just e) (e : takeWhile (/= e) elems))
+        , RawBlock (Format "html") 
+            ("<embed type=\"image/svg+xml\" class=\"timeline horizontally-centered\" src=\"generated/timeline-" <> T.pack (show (year e)) <> ".svg\">")
+        -- , Plain [Image nullAttr [] ("generated/timeline-" <> T.pack (show (year e)) <> ".svg", text e)]
         ]   
     Nothing -> pure block
 doBlock block = pure block
@@ -111,7 +115,7 @@ timelineSvg (lo, hi) highlightElement elements =
                 
                 connector = Svg.PolyLineTree $ Svg.PolyLine attrs
                                 [ V2 pX 350
-                                , V2 pX 225
+                                , V2 pX 300
                                 , V2 300 130
                                 ]
             
@@ -165,6 +169,9 @@ timelineSvg (lo, hi) highlightElement elements =
         defs = M.fromList (timelinePatterns <$> elements)
                 <> M.fromList (mkPattern "largePat" (Svg.Px 250) <$> toList highlightElement)
      in Svg.Document Nothing (Just w) (Just h) tree defs mempty mempty mempty
+
+svgToText :: Svg.Document -> Text
+svgToText = T.pack . ppcTopElement prettyConfigPP . Svg.xmlOfDocument
 
 addTimeline :: Pandoc -> IO Pandoc
 addTimeline doc = do

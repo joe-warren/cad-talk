@@ -52,7 +52,7 @@ body.loaded .loading {
 /* Display the first slide element on top */
 .slide>*:first-child {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Center an element if it's alone in the slide */
@@ -157,7 +157,7 @@ a:hover, a:active, a:focus {
   margin-top: 5rem;
 }
 
-img.center {
+img.center, svg.center {
   left: 50%;
   margin-bottom: 3px;
   margin-right: -50%;
@@ -327,8 +327,8 @@ blockquote p {
   font-style: italic;
 }
 
-
 .horizontally-centered {
   margin-left: auto;
   margin-right: auto;
 }
+
