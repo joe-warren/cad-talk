@@ -39,6 +39,7 @@ library
     , base >=4.7 && <5
     , containers
     , doctemplates
+    , fsnotify
     , lens
     , linear
     , megaparsec
@@ -66,6 +67,7 @@ executable cad-talk-exe
     , cad-talk
     , containers
     , doctemplates
+    , fsnotify
     , lens
     , linear
     , megaparsec
