@@ -168,6 +168,15 @@ object = (cube `Csg.subtract` cross) `Csg.intersection` sphere
 
 ---
 
+![](assets/images/freecad.png){class=bigimage}
+
+<div class="overlay">
+[Maxwxyz, CC BY 4.0](https://commons.wikimedia.org/wiki/File:FreeCAD_1.0_Light_PartDesign_Pozidriv.png)
+</div>
+
+
+---
+
 # 2023 : Waterfall-CAD ![](./assets/images/waterfall-cad-logo-square.svg)
 
 ---
