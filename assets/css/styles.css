@@ -145,7 +145,7 @@ a:hover, a:active, a:focus {
   transform: translate3d(0, 0, 0);
 }
 
-.bigimage img {
+img.bigimage{
   position: absolute;
   top: 0;
   left: 0;
@@ -282,7 +282,6 @@ pre {
 }
 
 .overlay {
-  font-family: "Noto Sans", "sans-serif";
   color: var(--primary);
   z-index: 10000;
   position: absolute;
