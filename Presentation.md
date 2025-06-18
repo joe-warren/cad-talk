@@ -72,7 +72,7 @@ difference() {
 > People who design stuff are not design engineers,
 > they have minimal or no training in
 > classic design tools or classic design paradigms,
-> and **these objects don't have to be pretty** 
+> and **these objects don't have to be pretty**,
 > they just have to work in many cases
 > and that's very very different from when
 > you design for manufacturing
@@ -108,9 +108,27 @@ It's not that there's not a place for OpenSCAD, but there's also room for tools 
 
 ---
 
+```javascript
+ // The value of 'a' reflects only the last set value
+    a = 0;
+    echo(a);
+ 
+    a = 5;
+    echo(a);
+```
+
+---
+
 
 # 2018 : I Write a CSG Library ![](./assets/images/csg-haskell.jpg)
 
+---
+
+![](assets/images/lambdale.png){class=bigimage}
+
+<div class="overlay">
+[LambdAle 2019](https://www.youtube.com/watch?v=pEN9N2B0ygM)
+</div>
 
 ---
 
@@ -130,9 +148,19 @@ object = (cube `Csg.subtract` cross) `Csg.intersection` sphere
 
 ![](assets/images/csg-csg.png){class=bigimage}
 
+
 ---
 
 ![](assets/images/csg-wireframe.png){class=bigimage}
+
+---
+
+![](assets/images/arm.gif){class=bigimage}
+
+
+<div class="overlay">
+[https://bitbucket.org/joe_warren/robot-arm](https://bitbucket.org/joe_warren/robot-arm)
+</div>
 
 ---
 
