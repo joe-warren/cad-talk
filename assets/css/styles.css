@@ -121,6 +121,7 @@ li {
 
 a {
   color: var(--primary);
+  text-decoration: none;
 }
 
 a:hover, a:active, a:focus {
@@ -222,7 +223,7 @@ img.right {
 h1 {
   font-size: 3rem;
   text-align: center;
-  color: maroon;
+  color: var(--header);
   font-family: 'Playfair Display', serif;
 }
 
@@ -231,7 +232,7 @@ h2 {
   font-size: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  color: maroon;
+  color: var(--header);
   font-family: 'Playfair Display', serif;
 }
 
@@ -240,7 +241,7 @@ h3 {
   font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  color: maroon;
+  color: var(--header);
   font-family: 'Playfair Display', serif;
 }
 
@@ -249,7 +250,7 @@ h4 {
   font-size: 1.4rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  color: maroon;
+  color: var(--header);
   font-family: 'Playfair Display', serif;
 }
 

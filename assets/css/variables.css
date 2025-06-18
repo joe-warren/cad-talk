@@ -5,7 +5,8 @@
 }
 
 :root.light {
-  --primary: #3F5569;
+  --header: maroon;
+  --primary: black;
   --secondary: #889EAF;
   --background: white;
 }
