@@ -176,7 +176,6 @@ svgToText = T.pack . ppcTopElement prettyConfigPP . Svg.xmlOfDocument
 addTimeline :: Pandoc -> IO Pandoc
 addTimeline doc = do
     let elements = query collectTimelineElements doc
-    print elements
     let bounds = timelineBounds elements
     forM (tail $ inits elements) $ \l -> 
         let e = last l
