@@ -145,7 +145,7 @@ a:hover, a:active, a:focus {
   transform: translate3d(0, 0, 0);
 }
 
-img.bigimage{
+img.bigimage, model-viewer.bigimage{
   position: absolute;
   top: 0;
   left: 0;

@@ -221,9 +221,10 @@ object = let
   touch-action="pan-y"
   auto-rotate
   rotation-per-second="90deg"
-  style="width: 600px; height: 400px;"
-  class="horizontally-centered"
+  style="width: 100%; height: 100%;"
+  class="bigimage"
   ></model-viewer>
+  
 ---
 
 # 2024 : Christmas Ornaments ![](./assets/images/christmas-haskell.jpg)
