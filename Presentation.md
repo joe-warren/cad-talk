@@ -18,12 +18,20 @@ author:
 # 2009 : FDM Patent Expires ![](./assets/images/fdm-patent.png)
 
 :::notes
-testing what happens if I put some notes here
+Fused Deposition Modeling (trademarked term)
+Filament Freeform Fabrication
+Manufacturing technique used by 3d printers 
 :::
 
 --- 
 
 # 2006 : RepRap Project Started ![](./assets/images/rep-rap.jpg)
+
+:::notes
+Founded By Adrian Bowyer at the University of Bath
+Aiming to make a 3d Printer that can be used to manufacture other 3d Printers
+Leads to a boom of open source 3d printer designs.
+:::
 
 ---
 
@@ -178,6 +186,19 @@ object = (cube `Csg.subtract` cross) `Csg.intersection` sphere
 
 # 1999 : OpenCascade Released ![](./assets/images/opencascade.png)
 
+:::notes
+Around eight hundred thousand lines of C++
+Matra Datavision started development in 1991, were bought out by Dassault Systèmes (3DS) in '98.
+Company called Open Cascade SAS is founded to generate profit from Open Cascade.
+Acquired and passed around a series of French engineering consultancies.
+Eventually wind out owned by Capgemini.
+
+All this detail is intended to give you an impression of the kind of library we're talking about.
+
+Enterprisey, but powerfull.
+
+
+
 ---
 
 ![](assets/images/freecad.png){class=bigimage}
@@ -276,5 +297,13 @@ object = let
 ---
 
 # Waterfall-CAD-SVG
+
+--- 
+
+* [Hackage Docs](https://hackage.haskell.org/package/waterfall-cad)
+* [Github Repo](https://github.com/joe-warren/opencascade-hs)
+
+
+<embed type="image/svg+xml" class="timeline horizontally-centered" src="./generated/timeline.svg"/>
 
 ---
