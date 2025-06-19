@@ -213,6 +213,19 @@ object = let
 
 ---
 
+<model-viewer
+  src="assets/models/csg.glb"
+  environment-image="assets/environments/moon_1k.hdr" 
+  shadow-intensity="1" 
+  camera-controls 
+  touch-action="pan-y"
+  auto-rotate
+  rotation-per-second="90deg"
+  style="width: 600px; height: 400px;"
+  class="horizontally-centered"
+  ></model-viewer>
+---
+
 # 2024 : Christmas Ornaments ![](./assets/images/christmas-haskell.jpg)
 
 ---
