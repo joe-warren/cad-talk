@@ -196,8 +196,7 @@ Eventually wind out owned by Capgemini.
 All this detail is intended to give you an impression of the kind of library we're talking about.
 
 Enterprisey, but powerfull.
-
-
+:::
 
 ---
 
@@ -245,6 +244,10 @@ object = let
   style="width: 100%; height: 100%;"
   class="bigimage"
   ></model-viewer>
+
+---
+
+![](./assets/images/chess.jpg){class="bigimage"}
 
 ---
 
@@ -298,12 +301,22 @@ object = let
 
 # Waterfall-CAD-SVG
 
+---
+
+<embed type="image/svg+xml" class="timeline horizontally-centered" src="./generated/timeline.svg"/>
+
 --- 
+
+
+# Links
 
 * [Hackage Docs](https://hackage.haskell.org/package/waterfall-cad)
 * [Github Repo](https://github.com/joe-warren/opencascade-hs)
-
-
-<embed type="image/svg+xml" class="timeline horizontally-centered" src="./generated/timeline.svg"/>
+* [Discord](https://discord.gg/aHfA4XKpyA)
+* Blogposts:
+  * [Haskell FFI](https://www.doscienceto.it/blog/posts/2024-01-23-ffi.html)
+  * [Things I've Printed](https://www.doscienceto.it/blog/posts/2024-06-30-things-ive-3d-printed-in-haskell.html)
+  * [Chessset](https://www.doscienceto.it/blog/posts/2024-09-15-chess-set.html)
+  * [Waterfall-CAD SVG](https://www.doscienceto.it/blog/posts/2025-04-14-waterfall-cad-svg.html)
 
 ---
