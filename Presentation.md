@@ -224,10 +224,54 @@ object = let
   style="width: 100%; height: 100%;"
   class="bigimage"
   ></model-viewer>
-  
+
 ---
 
 # 2024 : Christmas Ornaments ![](./assets/images/christmas-haskell.jpg)
+
+---
+
+![](./assets/images/scala-logo-backlit.jpg){class="bigimage"}
+
+
+<div class="overlay">
+[Mikołaj Wilczek; kiwicode.dev](https://kiwicode.dev/)
+</div>
+
+---
+
+![](./assets/images/scala-logo-03.jpg){class="bigimage"}
+
+---
+
+![](./assets/images/tree-ornament-scala.jpg){class="bigimage"}
+
+---
+
+![](./assets/images/tree-ornament-haskell.jpg){class="bigimage"}
+
+---
+
+<div class="imagegrid"
+>![](./assets/images/tree-ornament-elm.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-typescript.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-swift.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-kotlin.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-elixir.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-gleam-1.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-python.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-snowflake.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-go.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-bigquery.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-terraform.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-rust.jpg){class="ingrid"}
+![](./assets/images/tree-ornament-ruby.jpg){class="ingrid"}
+![](./assets/images/inclusive-blobfish.jpg){class="ingrid"}
+</div>
+
+---
+
+![](./assets/images/csg.svg){class="bigimage"}
 
 ---
 

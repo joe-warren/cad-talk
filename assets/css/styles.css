@@ -287,6 +287,15 @@ pre {
   position: absolute;
   bottom: 0.5rem;
   right: 1rem;
+  text-shadow: 
+    0px -1px 0px white,
+    0px 1px 0px white,
+    1px 1px 0px white,
+    1px 0px 0px white,
+    1px -1px 0px white,
+    -1px 1px 0px white,
+    -1px 0px 0px white,
+    -1px -1px 0px white;
 }
 
 .slide[aria-selected=true]~.overlay {
@@ -332,3 +341,15 @@ blockquote p {
   margin-right: auto;
 }
 
+
+div.imagegrid {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.ingrid {
+  max-width: 100%;
+  width: 180px;
+  object-fit: scale-down;
+}
