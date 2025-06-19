@@ -29,6 +29,14 @@ testing what happens if I put some notes here
 
 # 2016 : I Buy a 3d Printer ![](./assets/images/my-prusa.jpg)
 
+--- 
+
+![](assets/images/prusa.gif){class=bigimage}
+
+<div class="overlay">
+[Edmonton Public Library - Giphy](https://giphy.com/gifs/edmonton-yeg-public-library-qYy9yzTYgKFsom1VXf)
+</div>
+
 ---
 
 # 2010 : OpenSCAD Released ![](./assets/images/openscad.jpg)
