@@ -1,0 +1,40 @@
+<?xml version='1.0' ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="600.0px" height="400.0px">
+  <defs>
+    <pattern id="a" width="1.0" height="1.0" xlink:href="#">
+      <image width="150px" height="150.0px" xlink:href="./stl-example.jpg" />
+    </pattern>
+    <pattern id="b" width="1.0" height="1.0" xlink:href="#">
+      <image width="150px" height="150.0px" xlink:href="./gcode.jpg" />
+    </pattern>
+    <pattern id="c" width="1.0" height="1.0" xlink:href="#">
+      <image width="150px" height="150.0px" xlink:href="./cad-printed.jpg" />
+    </pattern>
+
+  </defs>
+
+  <circle stroke-width="2.0px" stroke="#800000" fill="url(#a)" cx="80px" cy="200.0px" r="75.0px" />
+
+  <circle stroke-width="2.0px" stroke="#800000" fill="url(#b)" cx="300px" cy="200.0px" r="75.0px" />
+  
+  <circle stroke-width="2.0px" stroke="#800000" fill="url(#c)" cx="520px" cy="200.0px" r="75.0px" />
+  <text fill="#000000" transform="translate(80.0, 300.0)" font-size="14px" font-family="Roboto, sans-serif" text-anchor="middle">STL</text>
+  <text fill="#000000" transform="translate(80.0, 320.0)" font-size="14px" font-family="Roboto, sans-serif" text-anchor="middle">(Triangles)</text>
+
+  <text fill="#000000" transform="translate(300.0, 300.0)" font-size="14px" font-family="Roboto, sans-serif" text-anchor="middle">GCode</text>
+  <text fill="#000000" transform="translate(300.0, 320.0)" font-size="14px" font-family="Roboto, sans-serif" text-anchor="middle">(Tool Path)</text>
+
+  <text fill="#000000" transform="translate(520.0, 300.0)" font-size="14px" font-family="Roboto, sans-serif" text-anchor="middle">Model</text>
+  <text fill="#000000" transform="translate(520.0, 320.0)" font-size="14px" font-family="Roboto, sans-serif" text-anchor="middle">(Plastic)</text>
+
+  <line stroke-width="2.0px" stroke="#800000" fill="none" x1="155.0px" y1="200.0px" x2="225.0px" y2="200.0px" />
+  <line stroke-width="2.0px" stroke="#800000" fill="none" x1="215.0px" y1="190.0px" x2="225.0px" y2="200.0px" />
+  <line stroke-width="2.0px" stroke="#800000" fill="none" x1="215.0px" y1="210.0px" x2="225.0px" y2="200.0px" />
+
+  <line stroke-width="2.0px" stroke="#800000" fill="none" x1="375.0px" y1="200.0px" x2="445.0px" y2="200.0px" />
+  <line stroke-width="2.0px" stroke="#800000" fill="none" x1="435.0px" y1="190.0px" x2="445.0px" y2="200.0px" />
+  <line stroke-width="2.0px" stroke="#800000" fill="none" x1="435.0px" y1="210.0px" x2="445.0px" y2="200.0px" />
+
+  <text fill="#000000" transform="translate(190, 185.0)" font-size="14px" font-family="Roboto, sans-serif" text-anchor="middle">Slicer</text>
+  <text fill="#000000" transform="translate(410.0, 185.0)" font-size="14px" font-family="Roboto, sans-serif" text-anchor="middle">Printer</text>
+</svg>

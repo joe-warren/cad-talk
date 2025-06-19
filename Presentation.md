@@ -37,6 +37,10 @@ testing what happens if I put some notes here
 [Edmonton Public Library - Giphy](https://giphy.com/gifs/edmonton-yeg-public-library-qYy9yzTYgKFsom1VXf)
 </div>
 
+--- 
+
+<embed type="image/svg+xml" class="timeline horizontally-centered" src="./assets/images/process.svg"/>
+
 ---
 
 # 2010 : OpenSCAD Released ![](./assets/images/openscad.jpg)
