@@ -171,7 +171,7 @@ img.center, svg.center {
 img.right {
   right: 50%;
   margin-bottom: 2rem;
-  margin-top: -4rem;
+  margin-top: 14rem;
   margin-right: -50%;
   position: absolute;
   transform: translate(-50%, -50%);

@@ -248,52 +248,50 @@ object = let
 
 # More than just CSG
 
+![](./assets/images/modules.png){class="right" width=200px}
 
 * Rounds and Fillets
 * Offset Solids
 * Lofts
 * Solids of Revolution
 * Extrusion along Paths
+* Text/Fonts
 * Queries over Solids
   * Bounding Boxes
   * Volume
   * Center of Mass
   * Moment of Inertia
 
-![](./assets/images/modules.png){class="right" width=200px}
 
 ---
 
 ```haskell
-sweepExample :: Solid
-sweepExample = 
+import Waterfall.Solids (Solid)
+import qualified Waterfall.TwoD.Path2D as Path2D
+import Waterfall.Revolution (revolution)
+import Linear (V2 (..))
 
-    let sweepPath = Path.pathFrom zero
-            [ Path.bezierRelative 
-                (V3 0 0 0.5)
-                (V3 0.5 0.5 0.5)
-                (V3 0.5 0.5 1)
-            , Path.bezierRelative 
-                (V3 0 0 0.5) 
-                (V3 (-0.5) (-0.5) 0.5) 
-                (V3 (-0.5) (-0.5) 1)
-            , Path.arcViaRelative (V3 0 1 1) (V3 0 2 0)
-            , Path.lineTo (V3 0 2 0) 
-            ] 
-        sweepProfile = Shape.makeShape $
-                Path2D.repeatLooping $
-                Path2D.bezier 
-                  (0.25 *^ unit _x) 
-                  (0.5 *^ unit _x) 
-                  (0.5 *^ angle (pi/6))
-                  (0.25 *^ angle (pi/6))
-    in sweep sweepPath sweepProfile
+revolutionExample :: Solid
+revolutionExample = 
+    revolution $ 
+        Path2D.pathFrom (V2 0 0)
+            [ Path2D.lineTo (V2 1 0)
+            , Path2D.lineRelative (V2 0.1 0.16)
+            , Path2D.lineTo (V2 1 0.2)
+            , Path2D.arcRelative Path2D.Clockwise 0.1 (V2 0 0.2)
+            , Path2D.bezierRelative (V2 (-0.6) 0.0) (V2 (-0.8) 2.2) (V2 (-0.8) 2.6)
+            , Path2D.lineTo (V2 0.5 3.0)
+            , Path2D.lineRelative (V2 0.1 0.16)
+            , Path2D.lineRelative (V2 (-0.2) 0.04)
+            , Path2D.lineTo (V2 0.1 3.2)
+            , Path2D.arcViaRelative (V2 0.5 0.6) (V2 (-0.1) 1.2)
+            ]
 ```
 
 ---
 
 <model-viewer
-  src="assets/models/sweep.glb"
+  src="assets/models/revolution.glb"
   environment-image="assets/environments/moon_1k.hdr" 
   shadow-intensity="1" 
   camera-controls 
@@ -303,8 +301,6 @@ sweepExample =
   style="width: 100%; height: 100%;"
   class="bigimage"
   ></model-viewer>
-
----
 
 ---
 
@@ -357,10 +353,6 @@ sweepExample =
 ---
 
 ![](./assets/images/csg.svg){class="bigimage"}
-
----
-
-# Waterfall-CAD-SVG
 
 ---
 
