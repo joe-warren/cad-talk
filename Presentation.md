@@ -168,7 +168,6 @@ object = (cube `Csg.subtract` cross) `Csg.intersection` sphere
 
 ![](assets/images/csg-csg.png){class=bigimage}
 
-
 ---
 
 ![](assets/images/csg-wireframe.png){class=bigimage}
@@ -244,6 +243,68 @@ object = let
   style="width: 100%; height: 100%;"
   class="bigimage"
   ></model-viewer>
+
+---
+
+# More than just CSG
+
+
+* Rounds and Fillets
+* Offset Solids
+* Lofts
+* Solids of Revolution
+* Extrusion along Paths
+* Queries over Solids
+  * Bounding Boxes
+  * Volume
+  * Center of Mass
+  * Moment of Inertia
+
+![](./assets/images/modules.png){class="right" width=200px}
+
+---
+
+```haskell
+sweepExample :: Solid
+sweepExample = 
+
+    let sweepPath = Path.pathFrom zero
+            [ Path.bezierRelative 
+                (V3 0 0 0.5)
+                (V3 0.5 0.5 0.5)
+                (V3 0.5 0.5 1)
+            , Path.bezierRelative 
+                (V3 0 0 0.5) 
+                (V3 (-0.5) (-0.5) 0.5) 
+                (V3 (-0.5) (-0.5) 1)
+            , Path.arcViaRelative (V3 0 1 1) (V3 0 2 0)
+            , Path.lineTo (V3 0 2 0) 
+            ] 
+        sweepProfile = Shape.makeShape $
+                Path2D.repeatLooping $
+                Path2D.bezier 
+                  (0.25 *^ unit _x) 
+                  (0.5 *^ unit _x) 
+                  (0.5 *^ angle (pi/6))
+                  (0.25 *^ angle (pi/6))
+    in sweep sweepPath sweepProfile
+```
+
+---
+
+<model-viewer
+  src="assets/models/sweep.glb"
+  environment-image="assets/environments/moon_1k.hdr" 
+  shadow-intensity="1" 
+  camera-controls 
+  touch-action="pan-y"
+  auto-rotate
+  rotation-per-second="90deg"
+  style="width: 100%; height: 100%;"
+  class="bigimage"
+  ></model-viewer>
+
+---
 
 ---
 
