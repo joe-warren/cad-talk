@@ -363,13 +363,14 @@ revolutionExample =
 
 # Links
 
-* [Hackage Docs](https://hackage.haskell.org/package/waterfall-cad)
-* [Github Repo](https://github.com/joe-warren/opencascade-hs)
-* [Discord](https://discord.gg/aHfA4XKpyA)
-* Blogposts:
-  * [Haskell FFI](https://www.doscienceto.it/blog/posts/2024-01-23-ffi.html)
-  * [Things I've Printed](https://www.doscienceto.it/blog/posts/2024-06-30-things-ive-3d-printed-in-haskell.html)
-  * [Chessset](https://www.doscienceto.it/blog/posts/2024-09-15-chess-set.html)
-  * [Waterfall-CAD SVG](https://www.doscienceto.it/blog/posts/2025-04-14-waterfall-cad-svg.html)
+* ![](./assets/images/hackage.png){width=1em} [Hackage Docs](https://hackage.haskell.org/package/waterfall-cad)
+* ![](./assets/images/github.svg){width=1em} [Github Repo](https://github.com/joe-warren/opencascade-hs)
+* ![](./assets/images/discord-round-color-icon.svg){width=1em} [Discord](https://discord.gg/aHfA4XKpyA)
+* ![](./assets/images/github.svg){width=1em} [These Slides](https://github.com/joe-warren/cad-talk/)
+* ![](./assets/images/monogram.svg){width=1em} Blogposts:
+  * ![](./assets/images/monogram.svg){width=1em} [Haskell FFI](https://www.doscienceto.it/blog/posts/2024-01-23-ffi.html)
+  * ![](./assets/images/monogram.svg){width=1em} [Things I've Printed](https://www.doscienceto.it/blog/posts/2024-06-30-things-ive-3d-printed-in-haskell.html)
+  * ![](./assets/images/monogram.svg){width=1em} [Chessset](https://www.doscienceto.it/blog/posts/2024-09-15-chess-set.html)
+  * ![](./assets/images/monogram.svg){width=1em} [Waterfall-CAD SVG](https://www.doscienceto.it/blog/posts/2025-04-14-waterfall-cad-svg.html)
 
 ---

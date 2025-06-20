@@ -116,6 +116,7 @@ ol {
 
 li {
   padding-right: 1rem;
+  line-height: 140%;
   min-width: 200px;
 }
 
@@ -355,4 +356,8 @@ div.imagegrid {
   max-width: 100%;
   width: 180px;
   object-fit: scale-down;
+}
+
+code.sourceCode {
+  font-family: 'Share Tech Mono', monospace;
 }
