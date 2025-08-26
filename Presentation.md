@@ -186,6 +186,9 @@ object = (cube `Csg.subtract` cross) `Csg.intersection` sphere
 # 1999 : OpenCascade Released ![](./assets/images/opencascade.png)
 
 :::notes
+
+Non-Uniform Rational B-Splines Modeling.
+
 Around eight hundred thousand lines of C++
 Matra Datavision started development in 1991, were bought out by Dassault Systèmes (3DS) in '98.
 Company called Open Cascade SAS is founded to generate profit from Open Cascade.
@@ -195,6 +198,7 @@ Eventually wind out owned by Capgemini.
 All this detail is intended to give you an impression of the kind of library we're talking about.
 
 Enterprisey, but powerfull.
+
 :::
 
 ---
@@ -250,7 +254,7 @@ object = let
 
 ![](./assets/images/modules.png){class="right" width=200px}
 
-* Rounds and Fillets
+* Rounds, Fillets & Chamfers
 * Offset Solids
 * Lofts
 * Solids of Revolution
