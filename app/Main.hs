@@ -10,7 +10,9 @@ import Text.DocTemplates
 import Timeline (addTimeline)
 import qualified System.FSNotify as FSNotify
 import Control.Concurrent (threadDelay)
-import Control.Monad (forever)
+import Control.Monad (forever, unless)
+import Control.Arrow ((&&&), Kleisli (..))
+import Options.Applicative
 
 parseInput :: Text -> IO Pandoc
 parseInput txt =
@@ -33,22 +35,37 @@ printSlides doc template dzcore =
     in runIOorExplode $ 
             writeDZSlides writerOptions doc
 
-rebuild :: IO ()
-rebuild = do 
-    putStrLn "rebuilding"
-    doc <- addTimeline =<< parseInput =<< T.readFile "Presentation.md"
+compileSlides :: Pandoc -> IO ()
+compileSlides doc = do
     templateTxt <- T.readFile "template.html" 
     dzcoreTxt <- T.readFile "dz-core.html" 
     template <- either error id <$> compileTemplate "." templateTxt
     T.writeFile "slides.html" =<< printSlides doc template dzcoreTxt
+
+compileOverview :: Pandoc -> IO ()
+compileOverview doc = do
+    templateTxt <- T.readFile "index-template.html" 
+    template <- either error id <$> compileTemplate "." templateTxt
+    T.writeFile "overview.html" =<< printSlides doc template ""
+
+rebuild :: IO ()
+rebuild = do 
+    putStrLn "rebuilding"
+    (runKleisli $ Kleisli compileSlides &&& Kleisli compileOverview)
+         =<< addTimeline 
+         =<< T.readFile "Presentation.md"
     putStrLn "done"
 
 main :: IO ()
 main = do
+    once <- execParser $ 
+        info (switch (long "once") <**> helper)
+            ( fullDesc <> progDesc "do the thing")
     rebuild
-    FSNotify.withManager $ \mgr -> do
-        FSNotify.watchDir mgr "Presentation.md" (const True) (const rebuild)
-        -- sleep until interrupted
-        forever $ threadDelay 1000000
+    unless once $
+        FSNotify.withManager $ \mgr -> do
+            FSNotify.watchDir mgr "Presentation.md" (const True) (const rebuild)
+            -- sleep until interrupted
+            forever $ threadDelay 1000000
     
 

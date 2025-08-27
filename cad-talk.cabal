@@ -43,6 +43,7 @@ library
     , lens
     , linear
     , megaparsec
+    , optparse-applicative
     , pandoc
     , pandoc-types
     , svg-tree
@@ -71,6 +72,7 @@ executable cad-talk-exe
     , lens
     , linear
     , megaparsec
+    , optparse-applicative
     , pandoc
     , pandoc-types
     , svg-tree

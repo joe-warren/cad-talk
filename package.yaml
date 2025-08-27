@@ -36,6 +36,7 @@ dependencies:
 - svg-tree
 - xml
 - fsnotify
+- optparse-applicative
 
 ghc-options:
 - -Wall
