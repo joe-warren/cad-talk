@@ -159,12 +159,12 @@ It's not that there's not a place for OpenSCAD, but there's also room for tools 
 ```haskell
 object :: Csg.BspTree
 object = (cube `Csg.subtract` cross) `Csg.intersection` sphere
-    where
-        sphere = Csg.unitSphere 32 16
-        cube = Csg.uniformScale 1.6 Csg.unitCube
-        cylinder = Csg.scale (0.5, 0.5, 3.0) $ Csg.unitCylinder 32
-        axes = [(1.0, 0.0, 0.0), (0.0, 1.0, 0.0), (0.0, 0.0, 1.0)]
-        cross = foldl1 Csg.union $ map (\a -> Csg.rotate a (pi/2) cylinder) axes
+  where
+    sphere = Csg.unitSphere 32 16
+    cube = Csg.uniformScale 1.6 Csg.unitCube
+    cylinder = Csg.scale (0.5, 0.5, 3.0) $ Csg.unitCylinder 32
+    axes = [(1.0, 0.0, 0.0), (0.0, 1.0, 0.0), (0.0, 0.0, 1.0)]
+    cross = foldl1 Csg.union $ map (\a -> Csg.rotate a (pi/2) cylinder) axes
 ```
 
 

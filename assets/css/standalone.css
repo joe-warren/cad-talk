@@ -1,9 +1,14 @@
+html {
+    background-color: white;
+}
+
 section.slide {
     width: 600px;
     height: 450px;
     display: block;
     position: relative;
-    border: 1px solid black;
+    border: 2px solid black;
+    box-shadow: 5px 5px 0  black;
     left: 0;
     font-size: 1rem;
 
