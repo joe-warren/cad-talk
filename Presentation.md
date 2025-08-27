@@ -19,7 +19,9 @@ author:
 
 :::notes
 Fused Deposition Modeling (trademarked term)
+
 Filament Freeform Fabrication
+
 Manufacturing technique used by 3d printers 
 :::
 
@@ -28,8 +30,10 @@ Manufacturing technique used by 3d printers
 # 2006 : RepRap Project Started ![](./assets/images/rep-rap.jpg)
 
 :::notes
-Founded By Adrian Bowyer at the University of Bath
-Aiming to make a 3d Printer that can be used to manufacture other 3d Printers
+Founded By Adrian Bowyer at the University of Bath.
+
+Aiming to make a 3d Printer that can be used to manufacture other 3d Printers.
+
 Leads to a boom of open source 3d printer designs.
 :::
 

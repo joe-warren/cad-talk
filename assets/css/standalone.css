@@ -5,12 +5,34 @@ section.slide {
     position: relative;
     border: 1px solid black;
     left: 0;
+    font-size: 1rem;
+
+    margin: 20px
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .ingrid {
     width: 140px;
+}
+
+.notes {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 600px;
+  padding: 1em;
+  color: #666
+}
+
+blockquote p {
+    font-size: 1rem;
+}
+
+div .sourceCode {
+    position: absolute; 
+    top: 50%;
+    transform: translate(0, -50%);
 }
