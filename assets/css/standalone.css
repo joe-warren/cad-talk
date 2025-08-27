@@ -1,0 +1,16 @@
+section.slide {
+    width: 600px;
+    height: 450px;
+    display: block;
+    position: relative;
+    border: 1px solid black;
+    left: 0;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+.ingrid {
+    width: 140px;
+}
