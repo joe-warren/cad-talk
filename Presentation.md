@@ -2,7 +2,7 @@
 css:
   - ./assets/css/variables.css
   - ./assets/css/styles.css
-title: Functional Programs for 3D Printing
+title: How I use Haskell for 3D Printing
 subtitle:
 introductory_notes: |
   Hello Team
