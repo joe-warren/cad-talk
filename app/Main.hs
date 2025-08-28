@@ -53,6 +53,7 @@ rebuild = do
     putStrLn "rebuilding"
     (runKleisli $ Kleisli compileSlides &&& Kleisli compileOverview)
          =<< addTimeline 
+         =<< parseInput
          =<< T.readFile "Presentation.md"
     putStrLn "done"
 
