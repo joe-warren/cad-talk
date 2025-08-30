@@ -112,7 +112,7 @@ difference() {
 
 <br/><br/>
 
-<div style="text-align: right; padding-right: 1em;">
+<div class="attribution">
 [— Marius Kintel, Fosdem 2020](https://www.youtube.com/watch?v=4EZL4O6b0BE)
 </div>
 

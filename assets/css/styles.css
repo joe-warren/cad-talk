@@ -363,6 +363,11 @@ blockquote::before {
   float: left;
 }
 
+.attribution {
+   text-align: right;
+   padding-right: 2.5em;
+}
+
 .horizontally-centered {
   margin-left: auto;
   margin-right: auto;
