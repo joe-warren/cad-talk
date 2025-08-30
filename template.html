@@ -28,10 +28,15 @@ $for(css)$
 $endfor$
 $else$
   $if(ratio43)$
-  $else$
-  /* Force a 16/9 ratio (by default, dzslides uses a 4/3 ratio) */
   body.loaded {
     height: 450px;
+    width: 600px;
+    margin-top: -225px;
+  }
+  $else$
+  body.loaded {
+    height: 450px;
+    width: 600px
     margin-top: -225px;
   }
   $endif$

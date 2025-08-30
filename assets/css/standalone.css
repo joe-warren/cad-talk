@@ -3,47 +3,20 @@ html {
 }
 
 section.slide {
-    width: 600px;
-    height: 450px;
     display: block;
     position: relative;
-    border: 2px solid black;
+    border: 3px solid black;
     box-shadow: 5px 5px 0  black;
     left: 0;
-    font-size: 1rem;
-
     margin: 20px;
-    padding: 0;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-embed {
-    transform-origin: top center;
-    transform: scale(90%);
-}
-
-.ingrid {
-    width: 140px;
 }
 
 .notes {
   position: absolute;
+  white-space: pre;
   top: 0;
   left: 100%;
   width: 600px;
   padding: 1em;
-  color: #666
-}
-
-blockquote p {
-    font-size: 1rem;
-}
-
-div .sourceCode {
-    position: absolute; 
-    top: 50%;
-    transform: translate(0, -50%);
+  color: #666;
 }

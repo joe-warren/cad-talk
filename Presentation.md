@@ -7,7 +7,7 @@ subtitle:
 introductory_notes: |
   Hello Team
 light: true
-#ratio43: true
+ratio43: true
 embed-css: true
 #display-notes: true
 overlay: 
@@ -112,7 +112,7 @@ difference() {
 
 <br/><br/>
 
-<div style="text-align: right">
+<div style="text-align: right; padding-right: 1em;">
 [— Marius Kintel, Fosdem 2020](https://www.youtube.com/watch?v=4EZL4O6b0BE)
 </div>
 

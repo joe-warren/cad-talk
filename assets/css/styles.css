@@ -6,11 +6,17 @@
   :root { font-family: InterVariable, sans-serif; }
 }
 html, .view body {
+  font-size: 16px;
   color: #000;
   font-family: 'Roboto', sans-serif;
   background-color: black;
 }
 body, .view section { background-color: white; }
+
+.slide * {
+  box-sizing: border-box;
+  margin: 0;
+}
 
 .view section .incremental {
   visibility: visible;
@@ -43,11 +49,12 @@ body.loaded .loading {
 .slide {
   color: var(--primary);
   background-color: var(--background);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  width: 600px;
+  height: 450px;
+  padding: 0;
 }
+
 
 /* Display the first slide element on top */
 .slide>*:first-child {
@@ -226,7 +233,7 @@ img.right {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   color: var(--header);
   font-family: 'Playfair Display', serif;
@@ -337,8 +344,23 @@ dd.explicit-list {
 }
 
 blockquote p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-style: italic;
+}
+
+.slide blockquote {
+  border-left: 1px solid maroon;
+  padding-left: 0.5em;
+  margin: 0 5em;
+}
+
+blockquote::before {
+  content: "\201C";
+  color: maroon;
+  font-size:  100px;
+  margin: -30px 0 -70px 0;
+  font-family: 'Playfair Display', serif;
+  float: left;
 }
 
 .horizontally-centered {
@@ -350,14 +372,27 @@ div.imagegrid {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  padding: 0.5em
 }
 
 .ingrid {
   max-width: 100%;
-  width: 180px;
+  width: 140px;
   object-fit: scale-down;
 }
 
 code.sourceCode {
   font-family: 'Share Tech Mono', monospace;
+}
+
+div .sourceCode {
+    position: absolute; 
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+embed {
+    transform-origin: top center;
+    transform: scale(90%);
 }
