@@ -37,6 +37,7 @@ dependencies:
 - xml
 - fsnotify
 - optparse-applicative
+- split
 
 ghc-options:
 - -Wall

@@ -1,6 +1,6 @@
 cabal-version: 2.2
 
--- This file has been generated from package.yaml by hpack version 0.37.0.
+-- This file has been generated from package.yaml by hpack version 0.38.1.
 --
 -- see: https://github.com/sol/hpack
 
@@ -24,6 +24,7 @@ source-repository head
 
 library
   exposed-modules:
+      AddSlideDiv
       Timeline
   other-modules:
       Paths_cad_talk
@@ -46,6 +47,7 @@ library
     , optparse-applicative
     , pandoc
     , pandoc-types
+    , split
     , svg-tree
     , text
     , xml
@@ -75,6 +77,7 @@ executable cad-talk-exe
     , optparse-applicative
     , pandoc
     , pandoc-types
+    , split
     , svg-tree
     , text
     , xml

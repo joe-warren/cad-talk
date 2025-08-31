@@ -8,11 +8,14 @@ import qualified Data.Text as T
 import qualified Data.Map as M
 import Text.DocTemplates
 import Timeline (addTimeline)
+import AddSlideDiv (addSlideDiv)
 import qualified System.FSNotify as FSNotify
 import Control.Concurrent (threadDelay)
 import Control.Monad (forever, unless)
 import Control.Arrow ((&&&), Kleisli (..))
 import Options.Applicative
+import Text.Pandoc.Highlighting
+import Text.Pandoc.Writers.Shared
 
 parseInput :: Text -> IO Pandoc
 parseInput txt =
@@ -35,6 +38,18 @@ printSlides doc template dzcore =
     in runIOorExplode $ 
             writeDZSlides writerOptions doc
 
+printHTML :: Pandoc -> Template Text -> IO Text
+printHTML doc template = let
+        writerOptions = def
+            { writerTemplate = Just template
+            , writerReferenceLinks = True
+            , writerHighlightStyle = Just pygments
+            , writerVariables = 
+               Context (M.singleton "highlighting-css" (toVal $ T.pack $ styleToCss pygments))
+            }
+    in runIOorExplode $ 
+            writeHtml5String writerOptions doc
+
 compileSlides :: Pandoc -> IO ()
 compileSlides doc = do
     templateTxt <- T.readFile "template.html" 
@@ -46,13 +61,13 @@ compileOverview :: Pandoc -> IO ()
 compileOverview doc = do
     templateTxt <- T.readFile "index-template.html" 
     template <- either error id <$> compileTemplate "." templateTxt
-    T.writeFile "overview.html" =<< printSlides doc template ""
+    T.writeFile "overview.html" =<< printHTML doc template
 
 rebuild :: IO ()
 rebuild = do 
     putStrLn "rebuilding"
-    (runKleisli $ Kleisli compileSlides &&& Kleisli compileOverview)
-         =<< addTimeline 
+    _ <- (runKleisli $ Kleisli compileSlides &&& Kleisli (compileOverview . addSlideDiv))
+         =<< addTimeline
          =<< parseInput
          =<< T.readFile "Presentation.md"
     putStrLn "done"

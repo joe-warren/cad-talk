@@ -2,7 +2,7 @@ html {
     background-color: white;
 }
 
-section.slide {
+.slide {
     display: block;
     position: relative;
     border: 3px solid black;
