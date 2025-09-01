@@ -11,6 +11,13 @@ html {
   width: fit-content;
 }
 
+@media screen and (max-device-width: 1309px){
+    .pair {
+        width: min-content;
+    }
+}
+
+
 .slide {
     display: inline-block;
     position: relative;
