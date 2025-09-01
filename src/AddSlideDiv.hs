@@ -3,17 +3,22 @@ module AddSlideDiv
 ) where
 
 import Text.Pandoc
-import Text.Pandoc.Slides (prepSlides, getSlideLevel)
-import Data.List (intersperse)
+import Data.List (partition)
 import Data.List.Split (splitOn)
+
+isNote :: Block -> Bool
+isNote (Div (_, classes, _) _) | "notes" `elem` classes = True
+isNote _ = False
 
 addSlideDiv :: Pandoc -> Pandoc
 addSlideDiv (Pandoc meta blocks) = 
-    let sl = getSlideLevel blocks
-        --blocks' = prepSlides sl blocks
-        blocks' = splitOn [HorizontalRule] blocks
+    let blocks' = splitOn [HorizontalRule] blocks
         contentAttr = ("", ["slide"], [])
         slideAttr = ("", ["pair"], [])
-        blocks'' = ((Div slideAttr . pure . Div contentAttr) <$> blocks')
+        noteAttr = ("", ["noteGroup"], [])
+        makeGroup bs = 
+            let (notes, regular) = partition isNote bs
+            in Div slideAttr [Div contentAttr regular, Div noteAttr notes]  
+        blocks'' = makeGroup <$> blocks'
         in Pandoc meta blocks''
 

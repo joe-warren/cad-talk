@@ -38,20 +38,24 @@ $endfor$
 </head>
 <body>
 $if(title)$
-<section class="slide title-slide">
-  <div>
-  <h1 class="title">$title$</h1>
-  <h3 class="subtitle">$subtitle$</h3></h3>
-  <footer class="authors">
-$for(author)$
-  <div class="author">$author.name$</div>
-$endfor$
-  </footer>
+<div class= "pair"> 
+  <div class="slide title-slide">
+    <div>
+    <h1 class="title">$title$</h1>
+    <h3 class="subtitle">$subtitle$</h3></h3>
+    <footer class="authors">
+  $for(author)$
+    <div class="author">$author.name$</div>
+  $endfor$
+    </footer>
+    </div>
   </div>
-  <div class="notes" role="note">
+  <div class="noteGroup">
+    <div class="notes">
       $introductory_notes$
+    </div>
   </div>
-</section>
+</div>
 $endif$
 $body$
 </body>
