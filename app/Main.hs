@@ -9,14 +9,13 @@ import qualified Data.Map as M
 import Text.DocTemplates
 import Timeline (addTimeline)
 import AddSlideDiv (addSlideDiv)
+import AddQRCode (addQRCode)
 import qualified System.FSNotify as FSNotify
 import Control.Concurrent (threadDelay)
 import Control.Monad (forever, unless)
 import Control.Arrow ((&&&), Kleisli (..))
 import Options.Applicative
 import Text.Pandoc.Highlighting
-import Text.Pandoc.Writers.Shared
-
 parseInput :: Text -> IO Pandoc
 parseInput txt =
     let readerOptions = def 
@@ -67,7 +66,7 @@ rebuild :: IO ()
 rebuild = do 
     putStrLn "rebuilding"
     _ <- (runKleisli $ Kleisli compileSlides &&& Kleisli (compileOverview . addSlideDiv))
-         =<< addTimeline
+         =<< addTimeline . addQRCode
          =<< parseInput
          =<< T.readFile "Presentation.md"
     putStrLn "done"

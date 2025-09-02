@@ -397,3 +397,9 @@ embed {
     transform-origin: top center;
     transform: scale(90%);
 }
+
+.qrcode {
+    float: right;
+    margin: 3em;
+    margin-top: 0;
+}

@@ -38,6 +38,8 @@ dependencies:
 - fsnotify
 - optparse-applicative
 - split
+- qrcode-core
+- vector
 
 ghc-options:
 - -Wall
