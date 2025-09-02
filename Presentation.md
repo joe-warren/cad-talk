@@ -237,24 +237,48 @@ This code, from an old version the official OpenSCAD user manual prints 5 twice.
 The user manual motivated this by saying OpenSCAD is a functional language.
 
 They've cleaned up this documentation since, but this is still weird.
+:::
 
-This isn't the main issue with OpenSCAD.
+---
 
-I think the main issue with OpenSCAD is that it has this two pass execution model.
 
-It evaluates the code, and builds up a tree of CSG operations, and only then does it produce geometry.
+![](assets/images/clojure.png){class=bigimage}
 
-The result of this, is that you can't get data out of objects at all.
+
+<div class="overlay">
+[clojure.core/typing - Matt Adereth](https://www.youtube.com/watch?v=uk3A41U0iO4)
+</div>
+
+:::notes
+That example's plagiarized, by the way. 
+
+It's used in a talk by Matt Adereth, given in 2015, about designing a keyboard, called a Dactyl, using Clojure.
+
+A relatively popular to deal with OpenSCAD language weirdness is by doing metaprogramming: writing programs in a different language, and having these programs produce OpenSCAD code.
+:::
+
+---
+
+
+![](assets/images/dactyl.jpg){class=bigimage}
+
+::: notes
+I use the keyboard from that talk: this is my dactyl. 
+
+Matt correctly identifies a number of issues with OpenSCAD, which are more subtle than just "it lets you declare values multiple times". 
+The key one being that objects in OpenSCAD aren't really "first class": you can't write higher order functions over objects. 
+
+I don't think he identifies every issue with OpenSCAD.
+
+A limitation of OpenSCAD is that it has a two pass execution model.
+
+It evaluates the code, and builds up a tree of CSG operations, and only once it's built that tree does it do a second pass to produce geometry.
+
+The result of this, is that you can't get data out of objects at all, you can't have a function that takes an object, and returns it's volume.
 
 This limits the kinds of program you can write: you can't say generate this object, and keep transforming it in a certain way until it's above a specific size.
 
-Part of the reason I think this issue particularly problematic, is that it's relatively popular to deal with OpenSCAD language weirdness by doing metaprogramming: writing programs in a different language, and having these programs produce OpenSCAD code.
-
-I actually use a keyboard that was designed using Clojure that generates OpenSCAD code.
-
-But while this solves issues like the out of order assignment, you can't metaprogram your way out of the issues with the execution model.
-
-
+Notably, you can't meta-program your way out of the issues with the execution model.
 :::
 
 ---
