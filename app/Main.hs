@@ -60,7 +60,7 @@ compileOverview :: Pandoc -> IO ()
 compileOverview doc = do
     templateTxt <- T.readFile "index-template.html" 
     template <- either error id <$> compileTemplate "." templateTxt
-    T.writeFile "overview.html" =<< printHTML doc template
+    T.writeFile "index.html" =<< printHTML doc template
 
 rebuild :: IO ()
 rebuild = do 
