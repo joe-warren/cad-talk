@@ -330,18 +330,20 @@ object = (cube `Csg.subtract` cross) `Csg.intersection` sphere
 # 1999 : OpenCascade Released ![](./assets/images/opencascade.png)
 
 :::notes
-
 Non-Uniform Rational B-Splines Modeling.
 
 Around eight hundred thousand lines of C++
+
 Matra Datavision started development in 1991, were bought out by Dassault Systèmes (3DS) in '98.
+OpenCascade itself is open-sourced in 1999.
+
 Company called Open Cascade SAS is founded to generate profit from Open Cascade.
 Acquired and passed around a series of French engineering consultancies.
 Eventually wind out owned by Capgemini.
 
 All this detail is intended to give you an impression of the kind of library we're talking about.
 
-Enterprisey, but powerfull.
+Enterprisey, but powerful in the sense that it contains a lot of "stuff".
 
 :::
 
@@ -352,6 +354,16 @@ Enterprisey, but powerfull.
 <div class="overlay">
 [Maxwxyz, CC BY 4.0](https://commons.wikimedia.org/wiki/File:FreeCAD_1.0_Light_PartDesign_Pozidriv.png)
 </div>
+
+:::notes
+This is a screenshot of an application called FreeCAD. 
+
+FreeCAD is a graphical CAD tool, built using OpenCascade as a CAD kernel. 
+
+Development on FreeCAD started in 2001, not long after OpenCascade was opensourced. 
+
+FreeCAD's used by, amongst other people, the European Space Agency.
+:::
 
 
 ---
