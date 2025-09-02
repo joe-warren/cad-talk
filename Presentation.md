@@ -18,9 +18,15 @@ author:
 # 2009 : FDM Patent Expires ![](./assets/images/fdm-patent.png)
 
 :::notes
+In my opinion, the story of 3d printing really starts in 2009.
+
+This is when a patent expires, which was held by a company called Stratasys.
+
+The patent's for a process called:
+
 Fused Deposition Modeling (trademarked term)
 
-Filament Freeform Fabrication
+Filament Freeform Fabrication (generic term)
 
 Manufacturing technique used by 3d printers 
 :::
@@ -34,12 +40,20 @@ Founded By Adrian Bowyer at the University of Bath.
 
 Aiming to make a 3d Printer that can be used to manufacture other 3d Printers.
 
-Leads to a boom of open source 3d printer designs.
+Anticipated the patent expiration 3 years later.
+
+RepRap is an open hardware project, and this leads to a boom of open source 3d printer designs.
 :::
 
 ---
 
 # 2016 : I Buy a 3d Printer ![](./assets/images/my-prusa.jpg)
+
+:::notes
+Ten years after the RepRap project was founded, I buy a 3d printer. 
+
+This is a Prusa i3 mk2, which is a variation on the RepRap design.
+:::
 
 --- 
 
@@ -49,13 +63,53 @@ Leads to a boom of open source 3d printer designs.
 [Edmonton Public Library - Giphy](https://giphy.com/gifs/edmonton-yeg-public-library-qYy9yzTYgKFsom1VXf)
 </div>
 
+:::notes
+I think It's easier to show how FDM printing works than to describe it. 
+
+There's a spool of filament, this is melted and fed through a print head. 
+
+The print head can move in three axes. 
+
+It traces a path, forming a layer, which it'll go on to print more layers on top of.
+
+In this way it builds up a 3d object.
+:::
+
 --- 
 
 <embed type="image/svg+xml" class="timeline horizontally-centered" src="./assets/images/process.svg"/>
 
+:::notes
+When you're preparing a 3d print, you generally work with two different types of data before you get to a solid object.
+
+You have the path that the print head traces out, and this is stored in a format called GCode.
+
+GCode is generally generated from a 3d model using a program called a Slicer. 
+
+A slicer generally reads 3d geometry in a mesh format, like a list of triangles, often in a format called STL.
+
+This format is also used in 3d computer graphics. 
+
+The rest of this talk is going to deal entirely with stuff that's to the left of this diagram. 
+
+I'm pretending "how do I take a 3d file, slice it, and then print it" as a solved problem.
+
+Instead, I'm focusing on how you come up with the mesh at the start of this process.
+::: 
 ---
 
 # 2010 : OpenSCAD Released ![](./assets/images/openscad.jpg)
+
+:::notes 
+In the year 2010, one year after the Stratasys patent expires, a program called OpenSCAD is released. 
+
+Started by a developer called Marius Kintel.
+
+This is described as "The Programmers Solid 3D CAD Modeller".
+
+It's a DSL for designing 3d printable objects.
+
+:::
 
 ---
 
@@ -65,6 +119,24 @@ Leads to a boom of open source 3d printer designs.
 [By User:Zottie - Own work, CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=263170)
 </div>
 
+:::notes
+Modeling in OpenSCAD is largely based around a concept called Constructive Solid Geometry or CSG.
+
+
+CSG involves taking primitive shapes, like spheres, cylinders and cubes, transforming them into a position, and then combining them with boolean operaters, like `intersection`, `union`, and `difference` (or `subtraction`).
+
+With these relatively simple primitive operations, you can build up quite complicated forms.
+
+This example's pulled from Wikipedia, and often used to demonstrate CSG modeling
+
+It's taking the intersection of a cube and a sphere, to make a rounded cube.
+
+Combining cylinders that have been rotated into different axes, unioning them to form a cross.
+
+Then it's subtracting the cross from the rounded cube to form this final shape.
+
+CSG approaches are also used in some graphics frameworks (such as raytracers).
+:::
 
 ---
 
@@ -82,12 +154,22 @@ difference() {
             cylinder(h=50, r=5, center=true);
     }
 }
-
 ```
+
+:::notes 
+This is what the code for that CSG example object looks like in OpenSCAD.
+
+You can hopefully see the relationship between this code and the CSG object:
+
+We have spheres, cubes and cylinders, as well as rotations, and intersections, unions and differences.
+:::
 ---
 
-
 ![](assets/images/openscad-csg.png){class=bigimage}
+
+:::notes
+And this is what OpenSCAD gives you if you run that code.
+:::
 
 --- 
 
@@ -117,7 +199,13 @@ difference() {
 </div>
 
 :::notes
-This is a quote from the Author of OpenSCAD
+I think it's good to be a little careful about voicing criticisms of other peoples work, especially open source work.
+
+And I would like to acknowledge that OpenSCAD invented the whole category of Programmable CAD framework. 
+
+With that said, I'm going to be talking about why I prefer to do Programmable CAD without OpenSCAD, which implies criticising it a bit.
+
+The best way I think I can explain my feelings about OpenSCAD is to show a quote from the Author.
 
 I think of this first quote as "Rob Pike coded"
 
