@@ -25,6 +25,7 @@ html {
     box-shadow: 5px 5px 0  black;
     left: 0;
     margin: 20px;
+    overflow: hidden;
 }
 
 .noteGroup {
