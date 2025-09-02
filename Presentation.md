@@ -229,6 +229,34 @@ It's not that there's not a place for OpenSCAD, but there's also room for tools 
     echo(a);
 ```
 
+:::notes
+I also want to get in a classic OpenSCAD bit of weirdness.
+
+This code, from an old version the official OpenSCAD user manual prints 5 twice. 
+
+The user manual motivated this by saying OpenSCAD is a functional language.
+
+They've cleaned up this documentation since, but this is still weird.
+
+This isn't the main issue with OpenSCAD.
+
+I think the main issue with OpenSCAD is that it has this two pass execution model.
+
+It evaluates the code, and builds up a tree of CSG operations, and only then does it produce geometry.
+
+The result of this, is that you can't get data out of objects at all.
+
+This limits the kinds of program you can write: you can't say generate this object, and keep transforming it in a certain way until it's above a specific size.
+
+Part of the reason I think this issue particularly problematic, is that it's relatively popular to deal with OpenSCAD language weirdness by doing metaprogramming: writing programs in a different language, and having these programs produce OpenSCAD code.
+
+I actually use a keyboard that was designed using Clojure that generates OpenSCAD code.
+
+But while this solves issues like the out of order assignment, you can't metaprogram your way out of the issues with the execution model.
+
+
+:::
+
 ---
 
 
