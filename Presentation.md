@@ -320,14 +320,43 @@ object = (cube `Csg.subtract` cross) `Csg.intersection` sphere
     cross = foldl1 Csg.union $ map (\a -> Csg.rotate a (pi/2) cylinder) axes
 ```
 
+:::notes
+This is what that example object looks like under that framework. 
+
+It's relatively similar to the OpenSCAD example, but it also demonstrates things like using folds.
+:::
 
 ---
 
 ![](assets/images/csg-csg.png){class=bigimage}
 
+:::notes
+And this is the output of running the code on the previous slide. 
+
+It looks pretty similar to the output of the OpenSCAD code.
+
+But this library is far from perfect. 
+
+There are superficial issues with it, like using the word `BspTree` for the core "Solid Object" type, when this is really an implementation detail.
+
+But there's also one big fundamental issue with it.
+::: 
+
 ---
 
 ![](assets/images/csg-wireframe.png){class=bigimage}
+
+:::notes
+The issue with the library, is that for the core data structure, I didn't choose to represent meshes with Polygon's, I use triangles.
+
+When the library combines shapes,
+
+If you take like one face, it's very easy to split that up into more triangles.
+
+But it's harder to combine those triangles and reduce the number of triangles that are in your object. 
+
+So I just don't do this, and I write a CSG library where every CSG operation you do exponentially increases the number of triangles in your object.
+:::
 
 ---
 
@@ -338,12 +367,25 @@ object = (cube `Csg.subtract` cross) `Csg.intersection` sphere
 [https://bitbucket.org/joe_warren/robot-arm](https://bitbucket.org/joe_warren/robot-arm)
 </div>
 
+:::notes
+This issue with the number of triangles isn't a complete show stopper. 
+
+So, at this point, I'm using this CSG framework as my go-to way to design for 3d printing.
+
+I do design some relatively complicated things in it, like this robot arm. 
+
+But it's bad enough that it does stop me from recommending it to people.
+
+I never for instance upload the library to Hackage.
+:::
+
 ---
 
 # 1999 : OpenCascade Released ![](./assets/images/opencascade.png)
 
 :::notes
 Non-Uniform Rational B-Splines Modeling.
+Curved surfaces, similar to Bezier curves.
 
 Around eight hundred thousand lines of C++
 
@@ -357,7 +399,6 @@ Eventually wind out owned by Capgemini.
 All this detail is intended to give you an impression of the kind of library we're talking about.
 
 Enterprisey, but powerful in the sense that it contains a lot of "stuff".
-
 :::
 
 ---
@@ -383,6 +424,12 @@ FreeCAD's used by, amongst other people, the European Space Agency.
 
 # 2023 : Waterfall-CAD ![](./assets/images/waterfall-cad-logo-square.svg)
 
+:::notes
+I have this idea that I could build a Haskell 3d modeling library, which uses OpenCASCADE under the hood.
+
+In 2023, I do this, and call it Waterfall-CAD.
+:::
+
 ---
 
 ```haskell
@@ -403,6 +450,14 @@ object = let
       `Waterfall.difference` (cylinder <> cylinderA <> cylinderB)
 ```
 
+:::notes
+This is the code for the CSG example in Waterfall CAD. 
+
+It's not massively different from the old framework. 
+
+Probably the main thing that might jump out at you is that I'm using the `Linear` linear algebra library rather than using tuples to represent vectors. 
+::: 
+
 ---
 
 <model-viewer
@@ -416,6 +471,11 @@ object = let
   style="width: 100%; height: 100%;"
   class="bigimage"
   ></model-viewer>
+
+
+:::notes
+And this is what the CSG example generated with Waterfall-CAD looks like
+:::
 
 ---
 
@@ -532,7 +592,6 @@ revolutionExample =
 <embed type="image/svg+xml" class="timeline horizontally-centered" src="./generated/timeline.svg"/>
 
 --- 
-
 
 # Links
 
