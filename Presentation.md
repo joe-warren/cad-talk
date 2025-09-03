@@ -250,9 +250,8 @@ They've cleaned up this documentation since, but this is still weird.
 </div>
 
 :::notes
-That example's plagiarized, by the way. 
-
-It's used in a talk by Matt Adereth, given in 2015, about designing a keyboard, called a Dactyl, using Clojure.
+That example was borrowed from a talk by Matt Adereth, given in 2015. 
+The talk is about designing a keyboard, called a Dactyl, using OpenSCAD code generated with Clojure.
 
 A relatively popular to deal with OpenSCAD language weirdness is by doing metaprogramming: writing programs in a different language, and having these programs produce OpenSCAD code.
 :::
@@ -285,6 +284,12 @@ Notably, you can't meta-program your way out of the issues with the execution mo
 
 
 # 2018 : I Write a CSG Library ![](./assets/images/csg-haskell.jpg)
+
+:::notes
+At some point in 2017, I learn Haskell, and, for a range of reasons, some good, some not so good, decide that Haskell would be a good programming language in which to do programmable CAD.
+
+In 2018, I decide to write a Constructive Solid Modeling library, in Haskell.
+:::
 
 ---
 
