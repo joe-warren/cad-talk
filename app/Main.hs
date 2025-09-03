@@ -79,7 +79,7 @@ main = do
     rebuild
     unless once $
         FSNotify.withManager $ \mgr -> do
-            FSNotify.watchDir mgr "Presentation.md" (const True) (const rebuild)
+            FSNotify.watchTree mgr "Presentation.md" (const True) (const rebuild)
             -- sleep until interrupted
             forever $ threadDelay 1000000
     
