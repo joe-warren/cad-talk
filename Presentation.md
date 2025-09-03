@@ -299,6 +299,14 @@ In 2018, I decide to write a Constructive Solid Modeling library, in Haskell.
 [LambdAle 2019](https://www.youtube.com/watch?v=pEN9N2B0ygM)
 </div>
 
+:::notes
+A couple of years later, I give a talk on this, at a conference called Lambdale in London.
+
+This is still on YouTube.
+
+It mostly works as an "Algorithms" talk, going into how you can use BSP trees to represent Solid objects.
+:::
+
 ---
 
 ```haskell
@@ -539,6 +547,3 @@ revolutionExample =
   * ![](./assets/images/monogram.svg){width=1em} [Things I've Printed](https://www.doscienceto.it/blog/posts/2024-06-30-things-ive-3d-printed-in-haskell.html)
   * ![](./assets/images/monogram.svg){width=1em} [Chessset](https://www.doscienceto.it/blog/posts/2024-09-15-chess-set.html)
   * ![](./assets/images/monogram.svg){width=1em} [Waterfall-CAD SVG](https://www.doscienceto.it/blog/posts/2025-04-14-waterfall-cad-svg.html)
-
-
----
