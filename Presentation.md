@@ -479,6 +479,8 @@ And this is what the CSG example generated with Waterfall-CAD looks like
 
 ---
 
+# Semigroups & Monoids
+
 <div class=center>
 <div class=sideBySide>
 <model-viewer
@@ -489,20 +491,20 @@ And this is what the CSG example generated with Waterfall-CAD looks like
   touch-action="pan-y"
   auto-rotate
   rotation-per-second="90deg"
-  style="width: 200px; height: 200px; display: inline-block;"
+  style="width: 280px; height: 280px; display: inline-block;"
   ></model-viewer>
 </div>
 
 <div class=sideBySide>
 <model-viewer
-  src="assets/models/intersection.glb"
-  environment-image="assets/environments/sphere.hdr" 
+  src="assets/models/sphere.glb"
+  environment-image="assets/environments/moon_1k.hdr" 
   shadow-intensity="1" 
   camera-controls 
   touch-action="pan-y"
   auto-rotate
   rotation-per-second="90deg"
-  style="width: 200px; height: 200px; display: inline-block;"
+  style="width: 280px; height: 280px; display: inline-block;"
   ></model-viewer>
 </div>
 </div>
@@ -529,7 +531,7 @@ Lets say we have a cube and a sphere, how can we combine these associatively.
   touch-action="pan-y"
   auto-rotate
   rotation-per-second="90deg"
-  style="width: 200px; height: 200px; display: inline-block;"
+  style="width: 280px; height: 280px; display: inline-block;"
   ></model-viewer>
   
 `union`
@@ -544,7 +546,7 @@ Lets say we have a cube and a sphere, how can we combine these associatively.
   touch-action="pan-y"
   auto-rotate
   rotation-per-second="90deg"
-  style="width: 200px; height: 200px; display: inline-block;"
+  style="width: 280px; height: 280px; display: inline-block;"
   ></model-viewer>
 
 `intersection` 
