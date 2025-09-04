@@ -392,10 +392,19 @@ div.sourceCode {
     transform: translate(0, -50%);
 }
 
-
 embed {
     transform-origin: top center;
     transform: scale(90%);
+}
+
+.sideBySide {
+  width: min-content;
+  display: inline-block;
+  text-align: center;
+  margin:auto;
+}
+.center {
+  text-align: center;
 }
 
 .qrcode {
@@ -403,3 +412,4 @@ embed {
     margin: 3em;
     margin-top: 0;
 }
+

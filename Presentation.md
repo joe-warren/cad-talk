@@ -479,6 +479,93 @@ And this is what the CSG example generated with Waterfall-CAD looks like
 
 ---
 
+<div class=center>
+<div class=sideBySide>
+<model-viewer
+  src="assets/models/cube.glb"
+  environment-image="assets/environments/moon_1k.hdr" 
+  shadow-intensity="1" 
+  camera-controls 
+  touch-action="pan-y"
+  auto-rotate
+  rotation-per-second="90deg"
+  style="width: 200px; height: 200px; display: inline-block;"
+  ></model-viewer>
+</div>
+
+<div class=sideBySide>
+<model-viewer
+  src="assets/models/intersection.glb"
+  environment-image="assets/environments/sphere.hdr" 
+  shadow-intensity="1" 
+  camera-controls 
+  touch-action="pan-y"
+  auto-rotate
+  rotation-per-second="90deg"
+  style="width: 200px; height: 200px; display: inline-block;"
+  ></model-viewer>
+</div>
+</div>
+
+:::notes
+I want to talk about Monoid instances briefly. 
+
+For Solids to have a semigroup, there needs to be an associative way of combining them.
+
+Lets say we have a cube and a sphere, how can we combine these associatively.
+:::
+
+---
+
+# Semigroups & Monoids
+
+<div class=center>
+<div class=sideBySide>
+<model-viewer
+  src="assets/models/union.glb"
+  environment-image="assets/environments/moon_1k.hdr" 
+  shadow-intensity="1" 
+  camera-controls 
+  touch-action="pan-y"
+  auto-rotate
+  rotation-per-second="90deg"
+  style="width: 200px; height: 200px; display: inline-block;"
+  ></model-viewer>
+  
+`union`
+</div>
+
+<div class=sideBySide>
+<model-viewer
+  src="assets/models/intersection.glb"
+  environment-image="assets/environments/moon_1k.hdr" 
+  shadow-intensity="1" 
+  camera-controls 
+  touch-action="pan-y"
+  auto-rotate
+  rotation-per-second="90deg"
+  style="width: 200px; height: 200px; display: inline-block;"
+  ></model-viewer>
+
+`intersection` 
+</div>
+</div>
+
+:::notes
+I think there are two main contenders, `union` and `intersection`.
+
+I've settled on a default instance where `mconcat` is `union`. 
+
+The reason for that is that it's much more common to want to overlay the geometry in two shapes than it is to want to compute the intersection.
+
+It's also the case that we don't exactly have an empty value for `intersection`.
+
+Boundary representaions are generally quite bad at modeling infinitely large shapes.
+
+We do have an instance for the `Lattice` typeclass from the `lattices` package, which gives us a newtype wrapper with the `intersection` monoid which is called `Meet`.
+:::
+---
+
 # More than just CSG
 
 ![](./assets/images/modules.png){class="right" width=200px}
