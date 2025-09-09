@@ -5,7 +5,9 @@ css:
 title: How I Use Haskell for 3D Printing
 subtitle:
 introductory_notes: |
-  Hello Team
+  Hi my name's Joe.
+
+  I'd like to talk to you about how I use Haskell for 3d printing.
 light: true
 ratio43: true
 embed-css: true
@@ -585,6 +587,14 @@ We do have an instance for the `Lattice` typeclass from the `lattices` package, 
   * Moment of Inertia
 
 
+:::notes
+I've talked a lot about Constructive Solid Geometry. 
+
+But a big advantage of hooking into an existing CAD Kernel is that you get a lot of other modeling operations effectively for free.
+
+These are generally concepts from traditional CAD, such as Fillets and Chamfers, or Lofting, which is a technique from boat building.
+:::
+
 ---
 
 ```haskell
@@ -610,6 +620,18 @@ revolutionExample =
             ]
 ```
 
+:::notes
+I'm not going to talk in detail about all of the library features. 
+
+But I did want to show some more example code. 
+
+This is a solid of revolution. 
+
+There are a lot of lines of code here, but the structure's relatively simple. 
+
+It's defining a path, and constructing a solid of revolution from that path.
+:::
+
 ---
 
 <model-viewer
@@ -624,9 +646,34 @@ revolutionExample =
   class="bigimage"
   ></model-viewer>
 
+:::notes
+This is the result of that code. 
+
+It's a chess piece (a pawn).
+:::
+
 ---
 
 ![](./assets/images/chess.jpg){class="bigimage"}
+
+
+<div class="overlay">
+[Chess Set](https://www.doscienceto.it/blog/posts/2024-09-15-chess-set.html)
+</div>
+
+:::notes
+Having designed a single chess piece for the example code, I thought I'd finish the chess set. 
+
+I've got a blog post about the design of this chess set, which is linked from the slides. 
+
+But in short, I think designing a chess set is nice because it shows off how one of the strengths of programable CAD.
+
+Which is parametricity. 
+
+There's this concept in CAD of parametric designs, which are designs that have a number of variables, that can be varied to produce subtly different objects.
+
+And in programable CAD, you get this more or less for free.
+:::
 
 ---
 
@@ -641,17 +688,48 @@ revolutionExample =
 [Mikołaj Wilczek; kiwicode.dev](https://kiwicode.dev/)
 </div>
 
+:::notes
+I'm going to go on a bit of a tangent now.
+
+I'm a Haskell developer, I live in London, and to the best of my knowledge London doesn't have much of a Haskell meetup scene anymore.
+
+So sometimes, I'll go to a meetup called "London Scala", because that's one way to meet people who care about Functional Programming.
+
+At one meetup, the meetup organiser had a 3d Printed Scala Logo, that she'd got from a conference.
+
+This was made by a Mikołaj Wilczek. 
+
+Now, this is a really nice object, nicer print quality than I get on a ten year old printer.
+
+But it struck me that since the Scala logo is a 3D object. 
+
+If you're going to print a 2D representation of it, you're missing out.
+:::
+
 ---
 
 ![](./assets/images/scala-logo-03.jpg){class="bigimage"}
+
+:::notes
+So that evening, I went home, and modeled the Scala logo in 3D.
+:::
 
 ---
 
 ![](./assets/images/tree-ornament-scala.jpg){class="bigimage"}
 
+:::notes
+I may be a Haskell developer, but the company I work for is largely a Scala Shop.
+
+And it was winter when I made this, so, I printed a bunch of “Scala Logo Tree Ornaments”.
+:::
 ---
 
 ![](./assets/images/tree-ornament-haskell.jpg){class="bigimage"}
+
+:::notes
+But I'm still a Haskell Developer, so I had to print some Haskell ornaments too.
+:::
 
 ---
 
@@ -672,14 +750,38 @@ revolutionExample =
 ![](./assets/images/inclusive-blobfish.jpg){class="ingrid"}
 </div>
 
+:::notes
+And at this point I got carried away, and do 14 other programming language logos.
+
+I'm a bit of a hypocrite.
+
+because, earlier when I was showing off the Scala logo, I said it doesn't make sense to 3d print a 2D image.
+
+But partway through this process, which is to find an SVG file of the logo.
+
+Convert the paths in the SVG file into the Haskell path DSL by hand. 
+
+And then figure out how best to glue the resulting shapes together into an ornament.
+
+While doing this, I got fed up converting SVG path data.
+
+So I find the `svg-tree` library on Hackage, and write a wrapper library to import SVG files.
+:::
+
 ---
 
 ![](./assets/images/csg.svg){class="bigimage"}
 
+:::notes
+And since I was doing SVG import, I also added SVG export.
+:::
+
 ---
 
-<embed type="image/svg+xml" class="timeline horizontally-centered" src="./generated/timeline.svg"/>
+# Related Projects
+--- 
 
+<embed type="image/svg+xml" class="timeline horizontally-centered" src="./generated/timeline.svg"/>
 --- 
 
 # Links
