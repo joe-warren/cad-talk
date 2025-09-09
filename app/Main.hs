@@ -16,6 +16,8 @@ import Control.Monad (forever, unless)
 import Control.Arrow ((&&&), Kleisli (..))
 import Options.Applicative
 import Text.Pandoc.Highlighting
+import System.Directory (createDirectoryIfMissing)
+import System.Process (callProcess)
 parseInput :: Text -> IO Pandoc
 parseInput txt =
     let readerOptions = def 
@@ -54,21 +56,29 @@ compileSlides doc = do
     templateTxt <- T.readFile "template.html" 
     dzcoreTxt <- T.readFile "dz-core.html" 
     template <- either error id <$> compileTemplate "." templateTxt
-    T.writeFile "slides.html" =<< printSlides doc template dzcoreTxt
+    T.writeFile "output/slides.html" =<< printSlides doc template dzcoreTxt
 
 compileOverview :: Pandoc -> IO ()
 compileOverview doc = do
     templateTxt <- T.readFile "index-template.html" 
     template <- either error id <$> compileTemplate "." templateTxt
-    T.writeFile "index.html" =<< printHTML doc template
+    T.writeFile "output/index.html" =<< printHTML doc template
+
+copyFiles :: IO ()
+copyFiles = do
+    callProcess "cp" ["-R", "assets", "output/assets"]
+    callProcess "cp" ["onstage.html", "output/onstage.html"]
+
 
 rebuild :: IO ()
 rebuild = do 
     putStrLn "rebuilding"
+    createDirectoryIfMissing True "output/generated"
     _ <- (runKleisli $ Kleisli compileSlides &&& Kleisli (compileOverview . addSlideDiv))
          =<< addTimeline . addQRCode
          =<< parseInput
          =<< T.readFile "Presentation.md"
+    copyFiles
     putStrLn "done"
 
 main :: IO ()

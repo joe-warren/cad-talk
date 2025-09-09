@@ -41,6 +41,7 @@ library
       JuicyPixels
     , base >=4.7 && <5
     , containers
+    , directory
     , doctemplates
     , fsnotify
     , lens
@@ -49,6 +50,7 @@ library
     , optparse-applicative
     , pandoc
     , pandoc-types
+    , process
     , qrcode-core
     , split
     , svg-tree
@@ -73,6 +75,7 @@ executable cad-talk-exe
     , base >=4.7 && <5
     , cad-talk
     , containers
+    , directory
     , doctemplates
     , fsnotify
     , lens
@@ -81,6 +84,7 @@ executable cad-talk-exe
     , optparse-applicative
     , pandoc
     , pandoc-types
+    , process
     , qrcode-core
     , split
     , svg-tree

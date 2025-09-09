@@ -179,8 +179,8 @@ addTimeline doc = do
     let bounds = timelineBounds elements
     forM (tail $ inits elements) $ \l -> 
         let e = last l
-            path = "generated/timeline-" <> show (year e) <> ".svg"
+            path = "output/generated/timeline-" <> show (year e) <> ".svg"
         in Svg.saveXmlFile path (timelineSvg bounds (Just e) l)
 
-    Svg.saveXmlFile "generated/timeline.svg" (timelineSvg bounds Nothing elements)
+    Svg.saveXmlFile "output/generated/timeline.svg" (timelineSvg bounds Nothing elements)
     pure $ walk (doBlock =<<) doc

@@ -40,6 +40,8 @@ dependencies:
 - split
 - qrcode-core
 - vector
+- directory
+- process
 
 ghc-options:
 - -Wall
