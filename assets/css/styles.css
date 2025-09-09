@@ -123,12 +123,12 @@ li {
   min-width: 200px;
 }
 
-a {
+.slide a {
   color: var(--primary);
   text-decoration: none;
 }
 
-a:hover, a:active, a:focus {
+.slide a:hover, .slide a:active, .slide a:focus {
   color: var(--secondary);
 }
 

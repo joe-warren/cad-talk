@@ -36,3 +36,15 @@ html {
   padding: 1em;
   color: #666;
 }
+
+a {
+  color: maroon
+}
+
+a::hover {
+  color: indianred;
+}
+
+p.preamble {
+  text-align: center;
+}
