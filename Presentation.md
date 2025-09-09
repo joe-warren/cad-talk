@@ -782,9 +782,43 @@ And since I was doing SVG import, I also added SVG export.
 ---
 
 # Related Projects
---- 
 
-<embed type="image/svg+xml" class="timeline horizontally-centered" src="./generated/timeline.svg"/>
+* ![](./assets/images/openscad.jpg){width=1em} [OpenSCAD](https://openscad.org/)
+* ![](./assets/images/csg-js.png){width=1em} [csg.js](https://evanw.github.io/csg.js/)
+* ![](./assets/images/cadquery.png){width=1em} [CadQuery](https://cadquery.readthedocs.io/en/latest/)
+* ![](./assets/images/zoo.png){width=1em} [zoo.dev/KittyCAD](https://zoo.dev/design-studio)
+* ![](./assets/images/implicit.png){width=1em} [ImplicitCAD](https://implicitcad.org/)
+
+:::notes
+I'm going to run through the alternatives to Waterfall CAD, if I've convinced you about programmable CAD, but not about my implementation of it.
+
+OpenSCAD, we've covered.
+
+csg.js is a JavaScript library, which exposes a very similar set of functionality to OpenSCAD, but without the DSL.
+
+CadQuery is similar to Waterfall CAD, in that it's a DSL wrapping OpenCASCADE, but in Python.
+
+I think it's noteworthy that people have done similar things in different languages.
+
+Zoo.dev, formally known as KittyCAD, is a commercial programmable CAD framework, with their own CAD kernel written in Rust, and their own DSL called KCL.
+
+It's interesting to me that there are funded companies working in the Programmable CAD space. 
+
+Unfortunately, I'm not personally keen to build a workflow around a proprietary language.
+
+ImplicitCAD, is a Haskell library, which contains a Haskell implementation of parts of OpenSCAD.
+
+Writen by Christopher Olah, maintained by Julia Longtin.
+
+It's significantly older than Waterfall CAD.
+
+I bounced off this, because the docs push you to use the OpenSCAD implementation.
+
+It is possible to use just the Haskell API to ImplicitCAD.
+
+ImplicitCAD makes very different design tradeoffs to Waterfall-CAD.
+:::
+
 --- 
 
 # Links
