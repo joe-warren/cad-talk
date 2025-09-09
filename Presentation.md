@@ -125,7 +125,7 @@ It's a DSL for designing 3d printable objects.
 Modeling in OpenSCAD is largely based around a concept called Constructive Solid Geometry or CSG.
 
 
-CSG involves taking primitive shapes, like spheres, cylinders and cubes, transforming them into a position, and then combining them with boolean operaters, like `intersection`, `union`, and `difference` (or `subtraction`).
+CSG involves taking primitive shapes, like spheres, cylinders and cubes, transforming them into a position, and then combining them with boolean operators, like `intersection`, `union`, and `difference` (or `subtraction`).
 
 With these relatively simple primitive operations, you can build up quite complicated forms.
 
@@ -133,7 +133,7 @@ This example's pulled from Wikipedia, and often used to demonstrate CSG modeling
 
 It's taking the intersection of a cube and a sphere, to make a rounded cube.
 
-Combining cylinders that have been rotated into different axes, unioning them to form a cross.
+Combining cylinders that have been rotated into different axes, union-ing them to form a cross.
 
 Then it's subtracting the cross from the rounded cube to form this final shape.
 
@@ -253,6 +253,7 @@ They've cleaned up this documentation since, but this is still weird.
 
 :::notes
 That example was borrowed from a talk by Matt Adereth, given in 2015. 
+
 The talk is about designing a keyboard, called a Dactyl, using OpenSCAD code generated with Clojure.
 
 A relatively popular to deal with OpenSCAD language weirdness is by doing metaprogramming: writing programs in a different language, and having these programs produce OpenSCAD code.
@@ -416,7 +417,7 @@ This is a screenshot of an application called FreeCAD.
 
 FreeCAD is a graphical CAD tool, built using OpenCascade as a CAD kernel. 
 
-Development on FreeCAD started in 2001, not long after OpenCascade was opensourced. 
+Development on FreeCAD started in 2001, not long after OpenCascade was open-sourced. 
 
 FreeCAD's used by, amongst other people, the European Space Agency.
 :::
@@ -564,9 +565,11 @@ The reason for that is that it's much more common to want to overlay the geometr
 
 It's also the case that we don't exactly have an empty value for `intersection`.
 
-Boundary representaions are generally quite bad at modeling infinitely large shapes.
+Boundary representations are generally quite bad at modeling infinitely large shapes.
 
 We do have an instance for the `Lattice` typeclass from the `lattices` package, which gives us a newtype wrapper with the `intersection` monoid which is called `Meet`.
+
+This all falls out of the fact that in Constructive Solid Geometry, Solids are manipulated with a Boolean Algebra, hence they have a `Lattice`.
 :::
 ---
 
@@ -666,13 +669,13 @@ Having designed a single chess piece for the example code, I thought I'd finish 
 
 I've got a blog post about the design of this chess set, which is linked from the slides. 
 
-But in short, I think designing a chess set is nice because it shows off how one of the strengths of programable CAD.
+But in short, I think designing a chess set is nice because it shows off how one of the strengths of programmable CAD.
 
 Which is parametricity. 
 
 There's this concept in CAD of parametric designs, which are designs that have a number of variables, that can be varied to produce subtly different objects.
 
-And in programable CAD, you get this more or less for free.
+And in programmable CAD, you get this more or less for free.
 :::
 
 ---
@@ -755,7 +758,7 @@ And at this point I got carried away, and do 14 other programming language logos
 
 I'm a bit of a hypocrite.
 
-because, earlier when I was showing off the Scala logo, I said it doesn't make sense to 3d print a 2D image.
+Because, earlier when I was showing off the Scala logo, I said it doesn't make sense to 3d print a 2D image.
 
 But partway through this process, which is to find an SVG file of the logo.
 
