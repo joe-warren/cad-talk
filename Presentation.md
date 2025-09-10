@@ -794,7 +794,7 @@ And since I was doing SVG import, I also added SVG export.
 </div>
 
 :::notes
-I'm going to run through the alternatives to Waterfall CAD, if I've convinced you about programmable CAD, but not about my implementation of it.
+I'm going to run through the alternatives to Waterfall CAD: maybe I've convinced you about programmable CAD, but not about my implementation of it.
 
 OpenSCAD, we've covered.
 
