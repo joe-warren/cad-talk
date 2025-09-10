@@ -90,9 +90,13 @@ body.loaded .loading {
 
 ul {
   text-align: left;
-  margin-left: 2rem;
+  margin-left: 1rem;
   margin-right: auto;
   list-style-type: disc;
+}
+
+.listWithImages li > ul {
+  padding-left: 2em;
 }
 
 .nobullet {
