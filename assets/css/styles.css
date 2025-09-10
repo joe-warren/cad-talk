@@ -413,3 +413,6 @@ embed {
     margin-top: 0;
 }
 
+.listWithImages li * {
+  vertical-align: middle;
+}

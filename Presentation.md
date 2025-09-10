@@ -798,7 +798,7 @@ And since I was doing SVG import, I also added SVG export.
 
 # Related Projects
 
-<div style="font-size: 150%">
+<div class="listWithImages" style="font-size: 150%">
 
 * ![](./assets/images/openscad.jpg){width=1em} [OpenSCAD](https://openscad.org/)
 * ![](./assets/images/scad-clj.png){width=1em} [scad-clj](https://clojars.org/scad-clj)
@@ -847,7 +847,11 @@ ImplicitCAD makes very different design tradeoffs to Waterfall-CAD.
 
 [QR_CODE_HERE](https://doscienceto.it/cad-talk){.qrcode}
 
+
+<div class="listWithImages">
+
 * ![](./assets/images/hackage.png){width=1em} [Hackage Docs](https://hackage.haskell.org/package/waterfall-cad)
+* ![](./assets/images/hackage.png){width=1em} [Introductory Examples](https://hackage.haskell.org/package/waterfall-cad-examples)
 * ![](./assets/images/github.svg){width=1em} [Github Repo](https://github.com/joe-warren/opencascade-hs)
 * ![](./assets/images/discord-round-color-icon.svg){width=1em} [Discord](https://discord.gg/aHfA4XKpyA)
 * ![](./assets/images/github.svg){width=1em} [These Slides](https://github.com/joe-warren/cad-talk/)
@@ -856,3 +860,6 @@ ImplicitCAD makes very different design tradeoffs to Waterfall-CAD.
   * ![](./assets/images/monogram.svg){width=1em} [Things I've Printed](https://www.doscienceto.it/blog/posts/2024-06-30-things-ive-3d-printed-in-haskell.html)
   * ![](./assets/images/monogram.svg){width=1em} [Chessset](https://www.doscienceto.it/blog/posts/2024-09-15-chess-set.html)
   * ![](./assets/images/monogram.svg){width=1em} [Waterfall-CAD SVG](https://www.doscienceto.it/blog/posts/2025-04-14-waterfall-cad-svg.html)
+* ![](./assets/images/monogram.svg){width=1em} [Example Objects](https://doscienceto.it/blog/waterfall/)
+
+</div>
