@@ -783,11 +783,15 @@ And since I was doing SVG import, I also added SVG export.
 
 # Related Projects
 
+<div style="font-size: 150%">
+
 * ![](./assets/images/openscad.jpg){width=1em} [OpenSCAD](https://openscad.org/)
 * ![](./assets/images/csg-js.png){width=1em} [csg.js](https://evanw.github.io/csg.js/)
 * ![](./assets/images/cadquery.png){width=1em} [CadQuery](https://cadquery.readthedocs.io/en/latest/)
 * ![](./assets/images/zoo.png){width=1em} [zoo.dev/KittyCAD](https://zoo.dev/design-studio)
 * ![](./assets/images/implicit.png){width=1em} [ImplicitCAD](https://implicitcad.org/)
+
+</div>
 
 :::notes
 I'm going to run through the alternatives to Waterfall CAD, if I've convinced you about programmable CAD, but not about my implementation of it.
@@ -829,7 +833,7 @@ ImplicitCAD makes very different design tradeoffs to Waterfall-CAD.
 * ![](./assets/images/github.svg){width=1em} [Github Repo](https://github.com/joe-warren/opencascade-hs)
 * ![](./assets/images/discord-round-color-icon.svg){width=1em} [Discord](https://discord.gg/aHfA4XKpyA)
 * ![](./assets/images/github.svg){width=1em} [These Slides](https://github.com/joe-warren/cad-talk/)
-* ![](./assets/images/monogram.svg){width=1em} Blogposts:
+* ![](./assets/images/monogram.svg){width=1em} [Blogposts](https://doscienceto.it/blog/tags/haskell.html):
   * ![](./assets/images/monogram.svg){width=1em} [Haskell FFI](https://www.doscienceto.it/blog/posts/2024-01-23-ffi.html)
   * ![](./assets/images/monogram.svg){width=1em} [Things I've Printed](https://www.doscienceto.it/blog/posts/2024-06-30-things-ive-3d-printed-in-haskell.html)
   * ![](./assets/images/monogram.svg){width=1em} [Chessset](https://www.doscienceto.it/blog/posts/2024-09-15-chess-set.html)
