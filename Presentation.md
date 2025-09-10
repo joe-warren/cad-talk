@@ -801,6 +801,7 @@ And since I was doing SVG import, I also added SVG export.
 <div style="font-size: 150%">
 
 * ![](./assets/images/openscad.jpg){width=1em} [OpenSCAD](https://openscad.org/)
+* ![](./assets/images/scad-clj.png){width=1em} [scad-clj](https://clojars.org/scad-clj)
 * ![](./assets/images/csg-js.png){width=1em} [csg.js](https://evanw.github.io/csg.js/)
 * ![](./assets/images/cadquery.png){width=1em} [CadQuery](https://cadquery.readthedocs.io/en/latest/)
 * ![](./assets/images/zoo.png){width=1em} [zoo.dev/KittyCAD](https://zoo.dev/design-studio)
@@ -812,6 +813,8 @@ And since I was doing SVG import, I also added SVG export.
 I'm going to run through the alternatives to Waterfall CAD: maybe I've convinced you about programmable CAD, but not about my implementation of it.
 
 OpenSCAD, we've covered.
+
+scad-clj is the clojure library used by Matt Adereth to design a keyboard.
 
 csg.js is a JavaScript library, which exposes a very similar set of functionality to OpenSCAD, but without the DSL.
 
