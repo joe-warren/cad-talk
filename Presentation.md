@@ -384,12 +384,27 @@ I never for instance upload the library to Hackage.
 
 ---
 
+![](assets/images/NURBS_surface.png){class=bigimage}
+
+<div class="overlay">
+[By chrschn - Selbst erstellt (mit OpenGL), Public Domain](https://commons.wikimedia.org/w/index.php?curid=4749720)
+</div>
+
+:::notes
+While slicers use mesh data, and so does OpenSCAD, traditional CAD frameworks don't generally Mesh data directly.
+
+Instead, they use "Non-Uniform Rational B-Splines" (NURBS) Modeling.
+
+Curved surfaces, similar to Bezier curves.
+
+Using NURBS means you can manipulate solids without loss of resolution. 
+:::
+
+---
+
 # 1999 : OpenCascade Released ![](./assets/images/opencascade.png)
 
 :::notes
-Non-Uniform Rational B-Splines Modeling.
-Curved surfaces, similar to Bezier curves.
-
 Around eight hundred thousand lines of C++
 
 Matra Datavision started development in 1991, were bought out by Dassault Systèmes (3DS) in '98.
