@@ -18,10 +18,12 @@ import Options.Applicative
 import Text.Pandoc.Highlighting
 import System.Directory (createDirectoryIfMissing)
 import System.Process (callProcess)
+import Data.Function ((&))
 parseInput :: Text -> IO Pandoc
 parseInput txt =
     let readerOptions = def 
-            { readerExtensions = pandocExtensions
+            { readerExtensions = pandocExtensions 
+                & disableExtension Ext_auto_identifiers
             , readerStandalone = True
             }
     in runIOorExplode $ 
