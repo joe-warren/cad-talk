@@ -737,11 +737,11 @@ And in programmable CAD, you get this more or less for free.
 :::notes
 I'm going to go on a bit of a tangent now.
 
-I'm a Haskell developer, I live in London, and to the best of my knowledge London doesn't have much of a Haskell meetup scene anymore.
+I've mentioned I'm a Scala + Haskell developer, amongst other things.
 
-So sometimes, I'll go to a meetup called "London Scala", because that's one way to meet people who care about Functional Programming.
+I've already touched on the fact that Scala + Haskell have things in common, hence I'm at a Scala meetup.
 
-At one meetup, the meetup organiser had a 3d Printed Scala Logo, that she'd got from a conference.
+At one of these Scala meetups, Zainab had a 3d Printed Scala Logo, that she'd got from a conference.
 
 This was made by a Mikołaj Wilczek. 
 
@@ -832,6 +832,7 @@ And since I was doing SVG import, I also added SVG export.
 * ![](./assets/images/scad-clj.png){width=1em} [scad-clj](https://clojars.org/scad-clj)
 * ![](./assets/images/csg-js.png){width=1em} [csg.js](https://evanw.github.io/csg.js/)
 * ![](./assets/images/cadquery.png){width=1em} [CadQuery](https://cadquery.readthedocs.io/en/latest/)
+* ![](./assets/images/occt-java.png){width=1em} [OCC Java Wrapper](https://dev.opencascade.org/project/occ-java-wrapper)
 * ![](./assets/images/zoo.png){width=1em} [zoo.dev/KittyCAD](https://zoo.dev/design-studio)
 * ![](./assets/images/implicit.png){width=1em} [ImplicitCAD](https://implicitcad.org/)
 
@@ -849,6 +850,14 @@ csg.js is a JavaScript library, which exposes a very similar set of functionalit
 CadQuery is similar to Waterfall CAD, in that it's a DSL wrapping OpenCASCADE, but in Python.
 
 I think it's noteworthy that people have done similar things in different languages.
+
+OCC Java Wrapper is the "Officially Supported" Java wrapper to OpenCascade.
+
+Unfortunately, this is a paid product, but there are a number of partially complete Open Source implementations of java wrappers.
+
+I bring this up in case I've inspired any of you to build something similar to this.
+
+(Personally I think I'd ignore the existing wrappers and write my own).
 
 Zoo.dev, formally known as KittyCAD, is a commercial programmable CAD framework, with their own CAD kernel written in Rust, and their own DSL called KCL.
 
