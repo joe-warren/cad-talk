@@ -294,6 +294,34 @@ At some point in 2017, I learn Haskell, and, for a range of reasons, some good, 
 In 2018, I decide to write a Constructive Solid Modeling library, in Haskell.
 :::
 
+--- 
+
+# Why am I Talking About Haskell at a Scala Meetup?
+
+
+<div class=center>
+<div class=sideBySide>
+![](assets/images/Haskell-Red.svg){ style="width: 240px; height: 240px; display: inline-block;" }
+</div>
+
+<div class=sideBySide>
+![](assets/images/Scala-Purple.svg){ style="width: 240px; height: 240px; display: inline-block;" }
+</div>
+</div>
+
+:::notes
+At this point, I want to take an aside, and talk briefly about why I think Haskell is a suitable topic for a Scala meetup.
+
+Haskell is a pure functional programming language. 
+
+Scala calls itself Multi-Paradigm, or Object-Functional: it supports both Object Oriented and Functional Programming. 
+
+But the specific flavour of Functional Programming that you do in Scala heavily borrows from FP in Haskell.
+
+It's strongly typed, and it has typeclasses. 
+
+I personally found it easier to learn the more advanced parts of the Scala ecosystem having learnt some Haskell.
+:::
 ---
 
 ![](assets/images/lambdale.png){class=bigimage}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 133.78773 212.09"
+   version="1.1"
+   sodipodi:docname="Scala-Purple.svg"
+   width="133.78773"
+   height="212.09"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4737288"
+     inkscape:cx="-85.497412"
+     inkscape:cy="128.58539"
+     inkscape:window-width="1889"
+     inkscape:window-height="1058"
+     inkscape:window-x="31"
+     inkscape:window-y="232"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <title
+     id="title1">scala-full-color</title>
+  <path
+     d="M 0.19772919,78.92 C 2.0477292,81.47 17.647729,86.28 40.917729,91.29 64.187729,95.75 88.387729,113.36 107.20773,107.93 119.93773,104.25 133.74773,71.46 133.74773,66.59 V 66.09 C 133.74773,62.69 131.19773,59.96 126.86773,57.69 109.11773,48.62 105.75773,45.28 99.177729,47.09 65.017729,56.52 4.7077292,51.7 0.19772919,78.92 Z"
+     style="fill:#2d2640;fill-opacity:1;fill-rule:evenodd"
+     id="path6" />
+  <path
+     d="M 0.19772919,145.5 C 2.0477292,148.09 17.647729,152.86 40.917729,157.88 66.917729,162.62 89.527729,178.07 108.35773,172.63 121.08773,168.95 133.74773,138.05 133.74773,133.17 V 132.69 C 133.74773,129.3 131.19773,126.56 126.86773,124.3 113.32773,117.1 95.437729,109.17 88.867729,110.98 54.647729,120.39 8.9077292,122.46 0.19772919,145.5 Z"
+     style="fill:#2d2640;fill-opacity:1;fill-rule:evenodd"
+     id="path7" />
+  <path
+     d="M 0.00772919,93.23 V 93.71 93.71 A 3.73,3.73 0 0 1 0.00772919,93.23 Z"
+     style="fill:#555555;fill-rule:evenodd"
+     id="path8" />
+  <path
+     d="M 108.30773,12.87 C 76.847729,21.96 26.937729,27.09 0.04772919,27.09 V 27.09 78.44 A 0.8,0.8 0 0 0 0.23772919,78.92 C 18.587729,78.92 75.237729,72.92 109.41773,63.52 A 129,129 0 0 0 126.90773,57.71 C 131.08773,55.83 133.78773,53.85 133.78773,51.79 V 0 C 133.74773,4.88 121.03773,9.2 108.30773,12.87 Z"
+     style="fill:#5e5086;fill-opacity:1;fill-rule:evenodd"
+     id="path9" />
+  <path
+     d="M 108.30773,79.46 C 89.477729,84.89 64.067729,88.93 40.917729,91.29 25.377729,92.88 10.857729,93.71 0.04772919,93.71 V 93.71 145.02 A 0.8,0.8 0 0 0 0.23772919,145.5 C 18.587729,145.5 75.237729,139.5 109.41773,130.11 A 130.38,130.38 0 0 0 126.90773,124.3 C 131.08773,122.41 133.78773,120.44 133.78773,118.38 V 66.59 C 133.74773,71.46 121.03773,75.78 108.30773,79.46 Z"
+     style="fill:#5e5086;fill-opacity:1;fill-rule:evenodd"
+     id="path10" />
+  <path
+     d="M 108.30773,146.09 C 89.477729,151.52 64.067729,155.55 40.917729,157.92 25.357729,159.51 10.817729,160.34 0.00772919,160.34 V 212.09 C 18.167729,212.09 75.107729,206.14 109.37773,196.7 122.00773,193.22 133.74773,189.26 133.74773,184.96 V 133.17 C 133.74773,138.09 121.03773,142.37 108.30773,146.09 Z"
+     style="fill:#5e5086;fill-opacity:1;fill-rule:evenodd"
+     id="path11" />
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>scala-full-color</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
