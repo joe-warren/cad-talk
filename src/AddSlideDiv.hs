@@ -29,7 +29,12 @@ addSlideDiv (Pandoc meta blocks) =
                 defaultSlideIdentifier = "slide-" <> (T.pack . show  $ i)
                 slideIdentifier = fromMaybe defaultSlideIdentifier $ optionalHeader usedIdentifiers regular
                 slideAttr = (slideIdentifier, ["pair"], [])
-                newBlock =  Div slideAttr [Div contentAttr regular, Div noteAttr notes]  
+                selflink = Link ("", ["selflink"], []) [] ("#" <> slideIdentifier, slideIdentifier)
+                newBlock =  Div slideAttr 
+                    [ Div contentAttr regular
+                    , Div noteAttr notes
+                    , Plain [selflink]
+                    ]  
             in (i+1, usedIdentifiers <> Set.singleton slideIdentifier, newBlock : blocksSoFar)
         (_, _, blocks'') = foldl' makeGroup (0, mempty, []) blocks'
         in Pandoc meta (reverse blocks'')

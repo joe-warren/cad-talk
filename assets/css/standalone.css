@@ -9,6 +9,7 @@ html {
   box-shadow: 5px 5px 0  black;
   margin: 2em auto;
   width: fit-content;
+  position: relative;
 }
 
 @media screen and (max-device-width: 1309px){
@@ -47,4 +48,15 @@ a::hover {
 
 p.preamble {
   text-align: center;
+}
+
+.selflink {
+  display: block;
+  position: absolute;
+  right: 0.5em;
+  bottom: 0.5em;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url('../images/selflink.svg');
+  background-size: cover;
 }

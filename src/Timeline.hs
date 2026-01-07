@@ -175,12 +175,12 @@ svgToText = T.pack . ppcTopElement prettyConfigPP . Svg.xmlOfDocument
 
 addTimeline :: Pandoc -> IO Pandoc
 addTimeline doc = do
-    let elements = query collectTimelineElements doc
-    let bounds = timelineBounds elements
-    forM (tail $ inits elements) $ \l -> 
+    let elems = query collectTimelineElements doc
+    let bounds = timelineBounds elems
+    _ <- forM (drop 1 $ inits elems) $ \l -> 
         let e = last l
             path = "output/generated/timeline-" <> show (year e) <> ".svg"
         in Svg.saveXmlFile path (timelineSvg bounds (Just e) l)
 
-    Svg.saveXmlFile "output/generated/timeline.svg" (timelineSvg bounds Nothing elements)
+    Svg.saveXmlFile "output/generated/timeline.svg" (timelineSvg bounds Nothing elems)
     pure $ walk (doBlock =<<) doc
