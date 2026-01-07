@@ -162,6 +162,12 @@ img.bigimage, model-viewer.bigimage{
   object-fit: contain;
 }
 
+@media (prefers-color-scheme: dark) {
+  .darkmode {
+    background-color: black;
+  }
+}
+
 .prose {
   margin-top: 5rem;
 }

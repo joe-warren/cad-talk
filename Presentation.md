@@ -788,7 +788,7 @@ So I find the `svg-tree` library on Hackage, and write a wrapper library to impo
 
 ---
 
-![](./assets/images/csg.svg){class="bigimage"}
+![](./assets/images/csg.svg){class="bigimage darkmode"}
 
 :::notes
 And since I was doing SVG import, I also added SVG export.
