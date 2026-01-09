@@ -21,7 +21,7 @@ svgToText classnames =
 
 addInline :: Inline -> Inline
 addInline (Link (_id, classnames, _) [Str "QR_CODE_HERE"] (url, _title)) = 
-    let qrCodeSvg = toSvg 4 7 (QR.defaultQRCodeOptions QR.Q) QR.Iso8859_1OrUtf8WithECI url
+    let qrCodeSvg = toSvg 4 6.5 (QR.defaultQRCodeOptions QR.Q) QR.Iso8859_1OrUtf8WithECI url
      in RawInline (Format "html") (svgToText classnames qrCodeSvg)
 addInline x = x
 

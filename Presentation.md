@@ -882,7 +882,7 @@ ImplicitCAD makes very different design tradeoffs to Waterfall-CAD.
 
 # Links
 
-[QR_CODE_HERE](https://doscienceto.it/cad-talk){.qrcode}
+[QR_CODE_HERE](https://doscienceto.it/cad-talk-scala){.qrcode}
 
 <div class="listWithImages" style="font-size: 80%">
 * Waterfall CAD:
