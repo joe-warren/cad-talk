@@ -312,6 +312,8 @@ In 2018, I decide to write a Constructive Solid Modeling library, in Haskell.
 :::notes
 At this point, I want to take an aside, and talk briefly about why I think Haskell is a suitable topic for a Scala meetup.
 
+Do a quick "hands up, who's written some Haskell"
+
 Haskell is a pure functional programming language. 
 
 Scala calls itself Multi-Paradigm, or Object-Functional: it supports both Object Oriented and Functional Programming. 
@@ -408,6 +410,8 @@ I do design some relatively complicated things in it, like this robot arm.
 But it's bad enough that it does stop me from recommending it to people.
 
 I never for instance upload the library to Hackage.
+
+Hackage is kind of like Haskell's version of Maven Central.
 :::
 
 ---
@@ -558,6 +562,8 @@ And this is what the CSG example generated with Waterfall-CAD looks like
 :::notes
 I want to talk about Monoid instances briefly. 
 
+Do a quick "hands up, who's familiar with semigroups and monoids"
+
 For Solids to have a semigroup, there needs to be an associative way of combining them.
 
 Lets say we have a cube and a sphere, how can we combine these associatively.
@@ -611,6 +617,8 @@ It's also the case that we don't exactly have an empty value for `intersection`.
 Boundary representations are generally quite bad at modeling infinitely large shapes.
 
 We do have an instance for the `Lattice` typeclass from the `lattices` package, which gives us a newtype wrapper with the `intersection` monoid which is called `Meet`.
+
+All these typeclasses exist in Scala too, via Cats.
 
 This all falls out of the fact that in Constructive Solid Geometry, Solids are manipulated with a Boolean Algebra, hence they have a `Lattice`.
 :::
