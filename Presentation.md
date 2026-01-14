@@ -775,7 +775,7 @@ I'm a bit of a hypocrite.
 
 Because, earlier when I was showing off the Scala logo, I said it doesn't make sense to 3d print a 2D image.
 
-But partway through this process, which is to find an SVG file of the logo.
+But I settle on a common process for designing tree ornaments, which is to find an SVG file of the logo.
 
 Convert the paths in the SVG file into the Haskell path DSL by hand. 
 
