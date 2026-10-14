@@ -695,104 +695,55 @@ And in programmable CAD, you get this more or less for free.
 
 ---
 
-# 2024 : Christmas Ornaments ![](./assets/images/christmas-haskell.jpg)
+<model-viewer
+  src="assets/models/bomb.glb"
+  environment-image="assets/environments/moon_1k.hdr" 
+  shadow-intensity="1" 
+  camera-controls 
+  touch-action="pan-y"
+  auto-rotate
+  rotation-per-second="90deg"
+  style="width: 100%; height: 100%;"
+  class="bigimage"
+  ></model-viewer>
+
+
+:::notes
+In my opinion, the main problem with shipping a Haskell library that depends on a C++ library is that C++ dependency management is hard.
+
+We rely on users doing a global system install of OpenCascade, different distros put this in different places.
+
+Compiling OpenCascade from source is slow.
+
+Nix (partially) solves this, but I don't want to tell people to use Nix. 
+:::
+
 
 ---
 
-![](./assets/images/scala-logo-backlit.jpg){class="bigimage"}
-
-
-<div class="overlay">
-[Mikołaj Wilczek; kiwicode.dev](https://kiwicode.dev/)
-</div>
+![](./assets/images/ghc-browser.png){class="bigimage"}
 
 :::notes
-I'm going to go on a bit of a tangent now.
+In late 2025, I see this post on the Haskell Discourse.
 
-I'm a Haskell developer, I live in London, and to the best of my knowledge London doesn't have much of a Haskell meetup scene anymore.
+Cheng Shao, of the `ghc-wasm-meta` project has got GHC to run in web assembly in the browser. 
 
-So sometimes, I'll go to a meetup called "London Scala", because that's one way to meet people who care about Functional Programming.
-
-At one meetup, the meetup organiser had a 3d Printed Scala Logo, that she'd got from a conference.
-
-This was made by a Mikołaj Wilczek. 
-
-Now, this is a really nice object, nicer print quality than I get on a ten year old printer.
-
-But it struck me that since the Scala logo is a 3D object. 
-
-If you're going to print a 2D representation of it, you're missing out.
+What if I use that to build a Haskell powered browser based CAD playground.
 :::
 
----
+--- 
 
-![](./assets/images/scala-logo-03.jpg){class="bigimage"}
+# 2026 : The Playground ![](./assets/images/waterpark.png)
 
 :::notes
-So that evening, I went home, and modeled the Scala logo in 3D.
+It takes a bit of time to come together, but in mid 2026, I ship this
 :::
 
----
+--- 
 
-![](./assets/images/tree-ornament-scala.jpg){class="bigimage"}
+# Live Demo 
 
-:::notes
-I may be a Haskell developer, but the company I work for is largely a Scala Shop.
-
-And it was winter when I made this, so, I printed a bunch of “Scala Logo Tree Ornaments”.
-:::
----
-
-![](./assets/images/tree-ornament-haskell.jpg){class="bigimage"}
-
-:::notes
-But I'm still a Haskell Developer, so I had to print some Haskell ornaments too.
-:::
-
----
-
-<div class="imagegrid"
->![](./assets/images/tree-ornament-elm.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-typescript.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-swift.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-kotlin.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-elixir.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-gleam-1.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-python.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-snowflake.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-go.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-bigquery.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-terraform.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-rust.jpg){class="ingrid"}
-![](./assets/images/tree-ornament-ruby.jpg){class="ingrid"}
-![](./assets/images/inclusive-blobfish.jpg){class="ingrid"}
-</div>
-
-:::notes
-And at this point I got carried away, and do 14 other programming language logos.
-
-I'm a bit of a hypocrite.
-
-Because, earlier when I was showing off the Scala logo, I said it doesn't make sense to 3d print a 2D image.
-
-But I settle on a common process for designing tree ornaments, which is to find an SVG file of the logo.
-
-Convert the paths in the SVG file into the Haskell path DSL by hand. 
-
-And then figure out how best to glue the resulting shapes together into an ornament.
-
-While doing this, I got fed up converting SVG path data.
-
-So I find the `svg-tree` library on Hackage, and write a wrapper library to import SVG files.
-:::
-
----
-
-![](./assets/images/csg.svg){class="bigimage darkmode"}
-
-:::notes
-And since I was doing SVG import, I also added SVG export.
-:::
+![doscienceto.it/waterpark](https://doscienceto.it/waterpark)
 
 ---
 
