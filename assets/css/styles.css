@@ -396,6 +396,11 @@ code.sourceCode {
   font-family: 'Share Tech Mono', monospace;
 }
 
+.code {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+
 div.sourceCode {
     position: absolute; 
     top: 50%;
