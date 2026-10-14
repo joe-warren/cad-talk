@@ -707,17 +707,15 @@ And in programmable CAD, you get this more or less for free.
   class="bigimage"
   ></model-viewer>
 
-
 :::notes
 In my opinion, the main problem with shipping a Haskell library that depends on a C++ library is that C++ dependency management is hard.
 
-We rely on users doing a global system install of OpenCascade, different distros put this in different places.
+We rely on users doing a global system install of OpenCascade, and different distros put this in different places.
 
 Compiling OpenCascade from source is slow.
 
-Nix (partially) solves this, but I don't want to tell people to use Nix. 
+Nix (partially) solves this, but I don't want to tell people to use Nix.
 :::
-
 
 ---
 
@@ -726,9 +724,9 @@ Nix (partially) solves this, but I don't want to tell people to use Nix.
 :::notes
 In late 2025, I see this post on the Haskell Discourse.
 
-Cheng Shao, of the `ghc-wasm-meta` project has got GHC to run in web assembly in the browser. 
+Cheng Shao, of the "ghc-wasm-meta" project, has got GHC to run in WebAssembly in the browser. 
 
-What if I use that to build a Haskell powered browser based CAD playground.
+What if I use that to build a Haskell powered, browser based CAD playground?
 :::
 
 --- 
@@ -736,14 +734,16 @@ What if I use that to build a Haskell powered browser based CAD playground.
 # 2026 : The Playground ![](./assets/images/waterpark.png)
 
 :::notes
-It takes a bit of time to come together, but in mid 2026, I ship this
+It takes a bit of time to come together, but in mid 2026, I ship this.
 :::
 
 --- 
 
 # Live Demo 
 
-![doscienceto.it/waterpark](https://doscienceto.it/waterpark)
+::: {.center .centered .code style="font-size: 2em; margin-top: 4em;"}
+[doscienceto.it/waterpark](https://doscienceto.it/waterpark){.center}
+:::
 
 ---
 
@@ -793,7 +793,6 @@ ImplicitCAD makes very different design tradeoffs to Waterfall-CAD.
 :::
 
 --- 
-
 # Links
 
 [QR_CODE_HERE](https://doscienceto.it/cad-talk){.qrcode}
@@ -803,6 +802,7 @@ ImplicitCAD makes very different design tradeoffs to Waterfall-CAD.
   * ![](./assets/images/hackage.png){width=1em} [Hackage Docs](https://hackage.haskell.org/package/waterfall-cad)
   * ![](./assets/images/hackage.png){width=1em} [Introductory Examples](https://hackage.haskell.org/package/waterfall-cad-examples)
   * ![](./assets/images/github.svg){width=1em} [Github Repo](https://github.com/joe-warren/opencascade-hs)
+  * ![](./assets/images/waterfall-cad-logo-square.svg){width=1em} [The Playground](https://doscienceto.it/waterpark)
   * ![](./assets/images/discord-round-color-icon.svg){width=1em} [Discord](https://discord.gg/aHfA4XKpyA)
   * ![](./assets/images/github.svg){width=1em} [These Slides](https://github.com/joe-warren/cad-talk/)
   * ![](./assets/images/monogram.svg){width=1em} [Blogposts](https://doscienceto.it/blog/tags/haskell.html):
